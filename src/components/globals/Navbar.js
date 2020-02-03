@@ -32,7 +32,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-sm">
+    <nav className="navbar navbar-expand-sm navbar-dark">
       <Link to="/" className="navbar-brand">
         <img src={logo} alt="logo"/>
       </Link>

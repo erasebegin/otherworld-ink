@@ -98,6 +98,10 @@ h6 {
   filter: brightness(0.8);
 }
 
+.navbar-toggler {
+  /* background-color: var(--purple3) !important; */
+}
+
 .default-background {
   min-height: 90vh;
   display: flex;
