@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link, Image } from "gatsby";
 import logo from "../../images/otherworld-logo.svg";
-// import { FaCartArrowDown } from "react-icons/fa";
+import { MdShoppingCart } from "react-icons/md";
 
 export default function Navbar() {
-  const [navOpen, serNavOpen] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
   const [navCss, setNavCss] = useState("collapse navbar-collapse");
   const [navLinks, setNavLinks] = useState([
     {
@@ -20,15 +20,23 @@ export default function Navbar() {
   ]);
 
   const navbarHandler = () => {
-    console.log("navbar handler says ey");
+    if(navOpen){
+      setNavOpen(false)
+      setNavCss("collapse navbar-collapse")
+      console.log("navbar is closed")
+    } else {
+      setNavOpen(true)
+      setNavCss("collapse navbar-collapse show")
+      console.log("navbar is open")
+    }
   };
 
   return (
-    <nav className="navbar navbar-expand-sm bg-light navbar-light">
+    <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
       <Link to="/" className="navbar-brand">
-        <img src={logo} alt="logo" height={80} />
+        <img src={logo} alt="logo"/>
       </Link>
-      <button className="navbar-toggle" type="button" onClick={navbarHandler}>
+      <button className="navbar-toggler" type="button" onClick={navbarHandler}>
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className={navCss}>
@@ -42,6 +50,9 @@ export default function Navbar() {
               </li>
             );
           })}
+          <li>
+            <MdShoppingCart className="cart-icon" />
+          </li>
         </ul>
       </div>
     </nav>
