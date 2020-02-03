@@ -32,7 +32,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav className="navbar navbar-expand-sm">
       <Link to="/" className="navbar-brand">
         <img src={logo} alt="logo"/>
       </Link>
@@ -44,7 +44,7 @@ export default function Navbar() {
           {navLinks.map(link => {
             return (
               <li key={link.id} className="nav-item">
-                <Link to={link.path} className="nav-link text-capitalize">
+                <Link to={link.path} className="nav-link text-uppercase">
                   {link.text}
                 </Link>
               </li>

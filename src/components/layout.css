@@ -1,16 +1,20 @@
-@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap"); */
+/* @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap'); */
+@import url("https://fonts.googleapis.com/css?family=Catamaran&display=swap");
 
 :root {
   --main1: rgb(26, 26, 26);
   --main2: rgb(90, 90, 90);
   --main3: rgb(235, 235, 235);
-  --main4: rgb(131, 0, 131);
+  --pink: #cc1c7e;
+  --purple1: rgb(131, 0, 131);
+  --purple2: rgb(39, 0, 39);
+  --purple3: rgb(255, 234, 255);
 }
 
 body {
   background: var(--main1);
   color: var(--main1);
-  font-family: "Ubuntu", sans-serif;
 }
 
 h1,
@@ -19,29 +23,73 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Catamaran", sans-serif;
   letter-spacing: 0.25rem;
 }
 
 .text-highlight {
-  color: var(--main4);
+  color: var(--pink);
 }
 
-.main-logo {
-  margin: 0;
-  padding: 0;
-  height: 300px;
-  background: radial-gradient(rgba(105, 105, 105, 0.5) 40%,rgba(255,255,255,0.5)20%,rgba(255, 234, 234, 0) 80%);
-  border-radius: 100%;
+.navbar {
+  background: linear-gradient(59deg, #27496f, #351f53, #d3b2ff);
+  background-size: 400% 400%;
+
+  -webkit-animation: nav-gradient 6s ease infinite;
+  -moz-animation: nav-gradient 6s ease infinite;
+  animation: nav-gradient 6s ease infinite;
+
+  @-webkit-keyframes nav-gradient {
+    0% {
+      background-position: 0% 52%;
+    }
+    50% {
+      background-position: 100% 49%;
+    }
+    100% {
+      background-position: 0% 52%;
+    }
+  }
+  @-moz-keyframes nav-gradient {
+    0% {
+      background-position: 0% 52%;
+    }
+    50% {
+      background-position: 100% 49%;
+    }
+    100% {
+      background-position: 0% 52%;
+    }
+  }
+  @keyframes nav-gradient {
+    0% {
+      background-position: 0% 52%;
+    }
+    50% {
+      background-position: 100% 49%;
+    }
+    100% {
+      background-position: 0% 52%;
+    }
+  }
 }
 
 .nav-link {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  font-family: "Catamaran", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  transition: 0.25s;
+}
+
+.nav-link:hover {
+  color: var(--purple2);
+  transition: 0.25s;
 }
 
 .cart-icon {
   cursor: pointer;
-  color: var(--main3);
+  color: var(--pink);
   font-size: 2rem;
   margin: 0.5rem 1rem;
 }
@@ -59,4 +107,70 @@ h6 {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.main-logo {
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  background: radial-gradient(
+    rgba(105, 105, 105, 0.5) 40%,
+    rgba(255, 255, 255, 0.5) 20%,
+    rgba(255, 234, 234, 0) 80%
+  );
+  border-radius: 100%;
+}
+
+.btn-purple {
+  color: var(--purple1) !important;
+  border-color: var(--purple1) !important;
+}
+
+.btn-purple:hover {
+  background: var(--pink);
+  color: var(--purple3) !important;
+}
+
+.footer {
+  color: var(--purple3);
+  background: linear-gradient(59deg, #27496f, #351f53, #d3b2ff);
+  background-size: 400% 400%;
+
+  -webkit-animation: nav-gradient 6s ease infinite;
+  -moz-animation: nav-gradient 6s ease infinite;
+  animation: nav-gradient 6s ease infinite;
+
+  @-webkit-keyframes nav-gradient {
+    0% {
+      background-position: 0% 52%;
+    }
+    50% {
+      background-position: 100% 49%;
+    }
+    100% {
+      background-position: 0% 52%;
+    }
+  }
+  @-moz-keyframes nav-gradient {
+    0% {
+      background-position: 0% 52%;
+    }
+    50% {
+      background-position: 100% 49%;
+    }
+    100% {
+      background-position: 0% 52%;
+    }
+  }
+  @keyframes nav-gradient {
+    0% {
+      background-position: 0% 52%;
+    }
+    50% {
+      background-position: 100% 49%;
+    }
+    100% {
+      background-position: 0% 52%;
+    }
+  }
 }

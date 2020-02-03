@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import Background from "../components/globals/Background";
-import About from "../components/home/About"
+import About from "../components/home/Info"
 import SEO from "../components/seo";
 
 const IndexPage = ({ data }) => (
