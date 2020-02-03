@@ -5,16 +5,15 @@
 :root {
   --main1: rgb(26, 26, 26);
   --main2: rgb(90, 90, 90);
-  --main3: rgb(235, 235, 235);
-  --pink: #cc1c7e;
+  --pink: rgb(204, 28, 126);
   --purple1: rgb(131, 0, 131);
   --purple2: rgb(39, 0, 39);
   --purple3: rgb(255, 234, 255);
+  --purple4: rgb(211, 178, 255);
 }
 
 body {
-  background: var(--main1);
-  color: var(--main1);
+  background: var(--main1) !important;
 }
 
 h1,
@@ -25,6 +24,7 @@ h5,
 h6 {
   font-family: "Catamaran", sans-serif;
   letter-spacing: 0.25rem;
+  color: var(--purple3);
 }
 
 .text-highlight {
@@ -32,7 +32,7 @@ h6 {
 }
 
 .navbar {
-  background: linear-gradient(59deg, #27496f, #351f53, #d3b2ff);
+  background: linear-gradient(59deg, rgb(39, 73, 111), rgb(53, 31, 83), #d3b2ff);
   background-size: 400% 400%;
 
   -webkit-animation: nav-gradient 6s ease infinite;
@@ -98,40 +98,39 @@ h6 {
   filter: brightness(0.8);
 }
 
-.navbar-toggler {
-  /* background-color: var(--purple3) !important; */
-}
-
 .default-background {
   min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.5));
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  filter: brightness(0.7);
 }
 
 .main-logo {
+  z-index: 1000;
   margin: 0;
   padding: 0;
-  height: 300px;
-  background: radial-gradient(
-    rgba(105, 105, 105, 0.5) 40%,
-    rgba(255, 255, 255, 0.5) 20%,
-    rgba(255, 234, 234, 0) 80%
-  );
+  height: 400px;
+  /* background: radial-gradient(
+    rgba(54, 0, 90, 0.4),
+    rgba(39, 73, 111, 0.4),
+    rgba(165, 165, 165, 0)
+  ); */
+  background-size: 50%;
+  background-position: center;
   border-radius: 100%;
 }
 
 .btn-purple {
-  color: var(--purple1) !important;
+  color: var(--purple4) !important;
   border-color: var(--purple1) !important;
 }
 
 .btn-purple:hover {
-  background: var(--pink);
+  background: var(--purple1) !important;
   color: var(--purple3) !important;
 }
 
@@ -178,3 +177,5 @@ h6 {
     }
   }
 }
+
+
