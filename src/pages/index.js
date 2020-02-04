@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => (
     </div>
     <PortfolioPreview data={data.portfolio}/>
     <div className="about-btn-container">
-      <Link to="/">
+      <Link to="/portfolio">
         <button className="btn text-uppercase btn-purple">see more</button>
       </Link>
     </div>

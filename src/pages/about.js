@@ -12,7 +12,7 @@ const AboutPage = ({ data }) => (
     <Background
       img={data.img.childImageSharp.fluid}
       title=" "
-      styleClass="default-background"
+      styleClass="secondary-background"
     />
     <Info />
   </Layout>
@@ -20,7 +20,7 @@ const AboutPage = ({ data }) => (
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "televirtual.jpg" }) {
+    img: file(relativePath: { eq: "tekno-priest.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

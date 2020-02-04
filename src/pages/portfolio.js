@@ -8,21 +8,19 @@ import Background from "../components/globals/Background";
 import SEO from "../components/seo";
 
 const PortfolioPage = ({ data }) => {
-  console.log("logging from portfolio: ", data.edges);
-
   return (
     <Layout>
       <SEO title="Portfolio" />
       <Background
         img={data.img.childImageSharp.fluid}
         title=" "
-        styleClass="default-background"
+        styleClass="secondary-background"
       />
       <section className="portfolio-preview py-5">
         <Title title="portfolio" />
         <div className="row">
           <div className="col-12 mx-auto text-center card-container">
-            {/* {data.edges.map(({ node }) => {
+            {data.portfolio.edges.map(({ node }) => {
               return (
                 <div className="portfolio-card" key={node.id}>
                   <Img fixed={node.image.fixed} className="card-image" />
@@ -31,7 +29,7 @@ const PortfolioPage = ({ data }) => {
                   </div>
                 </div>
               );
-            })} */}
+            })}
           </div>
         </div>
       </section>
@@ -41,7 +39,7 @@ const PortfolioPage = ({ data }) => {
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "televirtual.jpg" }) {
+    img: file(relativePath: { eq: "tao-gas-master.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

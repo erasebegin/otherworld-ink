@@ -109,6 +109,17 @@ h6 {
   filter: brightness(0.7);
 }
 
+.secondary-background {
+  max-height: 70vh;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: brightness(0.7);
+}
+
 .main-logo {
   z-index: 1000;
   margin: 0;
