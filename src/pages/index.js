@@ -3,7 +3,8 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import Background from "../components/globals/Background";
-import About from "../components/home/Info"
+import Info from "../components/home/Info";
+import PortfolioPreview from "../components/home/PortfolioPreview";
 import SEO from "../components/seo";
 
 const IndexPage = ({ data }) => (
@@ -14,7 +15,18 @@ const IndexPage = ({ data }) => (
       title=" "
       styleClass="default-background"
     />
-    <About />
+    <Info />
+    <div className="about-btn-container">
+      <Link to="/about/">
+        <button className="btn text-uppercase btn-purple">read more</button>
+      </Link>
+    </div>
+    <PortfolioPreview data={data.portfolio}/>
+    <div className="about-btn-container">
+      <Link to="/">
+        <button className="btn text-uppercase btn-purple">see more</button>
+      </Link>
+    </div>
   </Layout>
 );
 
@@ -24,6 +36,19 @@ export const query = graphql`
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    portfolio: allContentfulPortfolioEntry {
+      edges {
+        node {
+          id
+          title
+          image {
+            fixed(height: 200, width: 200) {
+              ...GatsbyContentfulFixed_tracedSVG
+            }
+          }
         }
       }
     }

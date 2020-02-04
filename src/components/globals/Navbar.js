@@ -16,6 +16,11 @@ export default function Navbar() {
       id: 2,
       path: "/about",
       text: "about"
+    },
+    {
+      id: 3,
+      path: "/portfolio",
+      text: "portfolio"
     }
   ]);
 

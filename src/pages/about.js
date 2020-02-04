@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import Background from "../components/globals/Background";
-import About from "../components/home/Info"
+import Info from "../components/home/Info"
 import SEO from "../components/seo";
 
 const AboutPage = ({ data }) => (
@@ -14,7 +14,7 @@ const AboutPage = ({ data }) => (
       title=" "
       styleClass="default-background"
     />
-    <About />
+    <Info />
   </Layout>
 );
 
