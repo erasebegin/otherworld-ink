@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import Img from "gatsby-image"
+import Img from "gatsby-image";
 
-import Title from "../components/globals/Title"
+import Title from "../components/globals/Title";
 import Layout from "../components/layout";
 import Background from "../components/globals/Background";
 import SEO from "../components/seo";
@@ -23,7 +23,9 @@ const PortfolioPage = ({ data }) => {
             {data.portfolio.edges.map(({ node }) => {
               return (
                 <div className="portfolio-card" key={node.id}>
-                  <Img fixed={node.image.fixed} className="card-image" />
+                  <Link to={`/portfolio/${node.slug}`}>
+                    <Img fixed={node.image.fixed} />
+                  </Link>
                   <div className="card-text">
                     <h6 className="mb-0">{node.title}</h6>
                   </div>
@@ -46,7 +48,7 @@ export const query = graphql`
         }
       }
     }
-    portfolio: allContentfulPortfolioEntry {
+    portfolio: allContentfulPortfolioEntry(limit: 1000) {
       edges {
         node {
           id
@@ -59,6 +61,7 @@ export const query = graphql`
               ...GatsbyContentfulFixed_tracedSVG
             }
           }
+          slug
         }
       }
     }

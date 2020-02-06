@@ -15,6 +15,11 @@ const AboutPage = ({ data }) => (
       styleClass="secondary-background"
     />
     <Info />
+    <div className="about-btn-container">
+      <Link to="/contact">
+        <button className="btn text-uppercase btn-purple">contact me</button>
+      </Link>
+    </div>
   </Layout>
 );
 

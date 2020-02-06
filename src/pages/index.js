@@ -39,10 +39,11 @@ export const query = graphql`
         }
       }
     }
-    portfolio: allContentfulPortfolioEntry {
+    portfolio: allContentfulPortfolioEntry(limit:1000) {
       edges {
         node {
           id
+          slug
           title
           image {
             fixed(height: 200, width: 200) {

@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-portfolio-js","path":"/portfolio/null/","result":{"errors":[{"message":"Variable \"$slug\" of non-null type \"String!\" must not be null.","locations":[{"line":9,"column":65}]}],"pageContext":{"slug":null,"id":"a76c8098-1d69-5acf-abc4-5a006cd51b4e"}}}

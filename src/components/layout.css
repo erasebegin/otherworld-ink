@@ -153,14 +153,26 @@ h6 {
   overflow: hidden;
 }
 
-.card-container {
+.portfolio-preview .card-container {
+  min-height: 300px;
   display: flex;
-  justify-content: space-evenly;
+  flex-flow: row wrap;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.portfolio-card {
+  margin: 2em 2em;
 }
 
 .card-text {
   max-width: 200px;
+  text-transform: capitalize;
+}
+
+.portfolio-page {
+  overflow: hidden;
 }
 
 .footer {
