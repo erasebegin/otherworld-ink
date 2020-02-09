@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Title from "../globals/Title"
 
-export default function about(hasButton) {
+export default function about() {
   return (
     <section className="py-4">
       <div className="container">

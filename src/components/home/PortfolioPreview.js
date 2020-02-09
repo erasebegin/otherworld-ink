@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import {Link} from "gatsby";
+import { Link } from "gatsby";
 import Title from "../globals/Title";
 import Img from "gatsby-image";
 
 export default function PortfolioPreview({ data }) {
-  const previewData = data.edges;
-  // console.log("logging:",previewData.node.slug)
+  const previewData = data.edges.slice(0, 4);
+
   if (data.edges.length === 0) {
     return <div></div>;
   } else {
@@ -16,7 +16,10 @@ export default function PortfolioPreview({ data }) {
           <div className="row">
             {previewData.map(({ node }) => {
               return (
-                <div className="portfolio-card mx-auto my-3 mx-3 text-center" key={node.id}>
+                <div
+                  className="portfolio-card mx-auto my-3 mx-3 text-center"
+                  key={node.id}
+                >
                   <Link to={`/portfolio/${node.slug}`}>
                     <Img fixed={node.image.fixed} className="card-image" />
                   </Link>

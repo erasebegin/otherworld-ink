@@ -149,6 +149,16 @@ h6 {
   margin: 0 0 2rem 0;
 }
 
+.pagination-btn-container {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 0 2em 2em 2em;
+}
+
 .portfolio-preview {
   overflow: hidden;
 }

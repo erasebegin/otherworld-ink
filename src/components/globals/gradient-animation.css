@@ -43,20 +43,20 @@
 #red{
     -webkit-animation:7s red linear infinite;
     -moz-animation:7s red linear infinite;
-    background-image: -moz-radial-gradient(50% 50%, circle contain, rgba(222, 75, 218, .75), rgba(222, 75, 218, 0) 100%);
-    background-image: -webkit-radial-gradient(50% 50%, circle contain, rgba(222, 75, 218, .75), rgba(222, 75, 218, 0) 100%);         
+    background-image: -moz-radial-gradient(50% 50%, circle contain, rgba(222, 75, 218, .5), rgba(222, 75, 218, 0) 100%);
+    background-image: -webkit-radial-gradient(50% 50%, circle contain, rgba(222, 75, 218, .5), rgba(222, 75, 218, 0) 100%);         
 }
 #blue{
     -webkit-animation:blue 6s linear infinite;
     -moz-animation:blue 6s linear infinite;
-    background-image: -webkit-radial-gradient(50% 50%, circle contain, rgba(86, 173, 223, .75), rgba(86, 173, 223, 0) 100%);
-    background-image: -moz-radial-gradient(50% 50%, circle contain, rgba(86, 173, 223, .75), rgba(86, 173, 223, 0) 100%);           
+    background-image: -webkit-radial-gradient(50% 50%, circle contain, rgba(86, 173, 223, .5), rgba(86, 173, 223, 0) 100%);
+    background-image: -moz-radial-gradient(50% 50%, circle contain, rgba(86, 173, 223, .5), rgba(86, 173, 223, 0) 100%);           
 }
 #green{
     -webkit-animation:green 8s linear infinite;
     -moz-animation:green 8s linear infinite;
-    background-image: -webkit-radial-gradient(50% 50%, circle contain, rgba(210, 222, 12, .75), rgba(210, 222, 12, 0) 100%);
-    background-image: -moz-radial-gradient(50% 50%, circle contain, rgba(210, 222, 12, .75), rgba(210, 222, 12, 0) 100%);          
+    background-image: -webkit-radial-gradient(50% 50%, circle contain, rgba(210, 222, 12, .5), rgba(210, 222, 12, 0) 100%);
+    background-image: -moz-radial-gradient(50% 50%, circle contain, rgba(210, 222, 12, .5), rgba(210, 222, 12, 0) 100%);          
 }
 
 @media(max-width:700px){
