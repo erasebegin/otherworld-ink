@@ -56,7 +56,7 @@ export default function Navbar() {
             );
           })}
           <li>
-            <MdShoppingCart className="cart-icon" />
+            <MdShoppingCart className="cart-icon snipcart-checkout" />
           </li>
         </ul>
       </div>

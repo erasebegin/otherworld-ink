@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import Background from "../components/globals/Background";
 import Info from "../components/home/Info";
 import PortfolioPreview from "../components/home/PortfolioPreview";
+import Contact from "../components/home/Contact";
 import SEO from "../components/seo";
 
 const IndexPage = ({ data }) => (
@@ -27,6 +28,7 @@ const IndexPage = ({ data }) => (
         <button className="btn text-uppercase btn-purple">see more</button>
       </Link>
     </div>
+    <Contact />
   </Layout>
 );
 

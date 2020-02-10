@@ -10,6 +10,7 @@ exports.components = {
   "component---src-pages-404-js": hot(preferDefault(require("C:\\Users\\Chris\\Documents\\Repos\\otherworld-ink\\src\\pages\\404.js"))),
   "component---src-pages-about-js": hot(preferDefault(require("C:\\Users\\Chris\\Documents\\Repos\\otherworld-ink\\src\\pages\\about.js"))),
   "component---src-pages-index-js": hot(preferDefault(require("C:\\Users\\Chris\\Documents\\Repos\\otherworld-ink\\src\\pages\\index.js"))),
-  "component---src-pages-portfolio-js": hot(preferDefault(require("C:\\Users\\Chris\\Documents\\Repos\\otherworld-ink\\src\\pages\\portfolio.js")))
+  "component---src-pages-portfolio-js": hot(preferDefault(require("C:\\Users\\Chris\\Documents\\Repos\\otherworld-ink\\src\\pages\\portfolio.js"))),
+  "component---src-pages-shop-js": hot(preferDefault(require("C:\\Users\\Chris\\Documents\\Repos\\otherworld-ink\\src\\pages\\shop.js")))
 }
 

@@ -164,8 +164,17 @@ h6 {
   padding: 0 2em 2em 2em;
 }
 
-.portfolio-preview {
+.portfolio-preview,
+.contact {
   overflow: hidden;
+}
+
+.contact input, .contact textarea {
+  background-color: var(--purple3);
+}
+
+.contact label {
+  display: none;
 }
 
 .portfolio-preview .card-container {
@@ -244,6 +253,5 @@ h6 {
 }
 
 .contact-nav-link {
-  filter: brightness(1.2)
+  filter: brightness(1.2);
 }
-
