@@ -32,7 +32,12 @@ h6 {
 }
 
 .navbar {
-  background: linear-gradient(59deg, rgb(39, 73, 111), rgb(53, 31, 83), #d3b2ff);
+  background: linear-gradient(
+    59deg,
+    rgb(39, 73, 111),
+    rgb(53, 31, 83),
+    #d3b2ff
+  );
   background-size: 400% 400%;
 
   -webkit-animation: nav-gradient 6s ease infinite;
@@ -229,4 +234,16 @@ h6 {
   }
 }
 
+.contact-list {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.contact-nav-link {
+  filter: brightness(1.2)
+}
 

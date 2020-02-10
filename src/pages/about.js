@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import Background from "../components/globals/Background";
@@ -16,9 +16,9 @@ const AboutPage = ({ data }) => (
     />
     <Info />
     <div className="about-btn-container">
-      <Link to="/contact">
+      <a href = "mailto:leon@otherworldink.com">
         <button className="btn text-uppercase btn-purple">contact me</button>
-      </Link>
+      </a>
     </div>
   </Layout>
 );
