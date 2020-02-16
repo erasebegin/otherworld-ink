@@ -23,13 +23,13 @@ export default function Footer() {
               <a
                 href="https://www.instagram.com/otherworld__ink"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <FaInstagram />
               </a>
             </li>
             <li className="nav-link contact-nav-link">
-              <a href="https://www.twitter.com" target="_blank" rel="noopener">
+              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
                 <FaTwitterSquare />
               </a>
             </li>
@@ -37,7 +37,7 @@ export default function Footer() {
               <a
                 href="https://www.behance.net/Leon_dB"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <FaBehanceSquare />
               </a>

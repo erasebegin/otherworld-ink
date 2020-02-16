@@ -21,7 +21,7 @@ export default function PortfolioPreview({ data }) {
                   key={node.id}
                 >
                   <Link to={`/portfolio/${node.slug}`}>
-                    <Img fixed={node.image.fixed} className="card-image" />
+                    <Img fixed={node.image.fixed} />
                   </Link>
                   <div className="card-text">
                     <h6 className="mb-0">{node.title}</h6>

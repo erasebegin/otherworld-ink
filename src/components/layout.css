@@ -255,3 +255,8 @@ h6 {
 .contact-nav-link {
   filter: brightness(1.2);
 }
+
+.card {
+  background-color: var(--main1) !important;
+  filter: brightness(1.2)
+}

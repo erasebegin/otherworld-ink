@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import Title from "../globals/Title"
 
 export default function about() {

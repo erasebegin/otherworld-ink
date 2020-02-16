@@ -6,7 +6,7 @@ import { MdShoppingCart } from "react-icons/md";
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
   const [navCss, setNavCss] = useState("collapse navbar-collapse");
-  const [navLinks, setNavLinks] = useState([
+  const [navLinks] = useState([
     {
       id: 1,
       path: "/",
@@ -21,6 +21,11 @@ export default function Navbar() {
       id: 3,
       path: "/portfolio",
       text: "portfolio"
+    },
+    {
+      id: 4,
+      path: "/shop",
+      text: "shop"
     }
   ]);
 
