@@ -10,6 +10,8 @@
   --purple2: rgb(39, 0, 39);
   --purple3: rgb(255, 234, 255);
   --purple4: rgb(211, 178, 255);
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -103,6 +105,71 @@ h6 {
   filter: brightness(0.8);
 }
 
+/* PARALLAX IMAGE STYLES */
+
+.parallax-container {
+  height: 90vh;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.para1 {
+  transform: translateY(-20%);
+  position: absolute;
+  bottom: 100;
+  left: 0;
+  width: 100%;
+}
+
+.para2 {
+  position: absolute;
+  width: 100%;
+}
+
+.para3 {
+  position: absolute;
+  width: 100%;
+  /* transform: translateX(-60px); */
+}
+
+.para4 {
+  position: absolute;
+  width: 100%;
+}
+
+.para5 {
+  position: absolute;
+  width: 100%;
+  transform: translate(100px, -300px)
+}
+
+@media (max-width: 700px) {
+  .parallax-container {
+    height: 50vh;
+  }
+
+  .para1 {
+    width: 150%;
+  }
+
+  .para2 {
+    width: 150%;
+    transform: translateY(10px)
+  }
+
+  .para3 {
+    width: 150%;
+  }
+
+  .para4 {
+    width: 150%;
+  }
+
+  .para5 {
+    transform: none;
+  }
+}
+
 .default-background {
   min-height: 90vh;
   display: flex;
@@ -115,14 +182,18 @@ h6 {
 }
 
 .secondary-background {
-  max-height: 70vh;
-  background-position: top;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
+  align-items: flex-start;
+  justify-content: start;
+  background-position-y: -14em;
   background-attachment: fixed;
   filter: brightness(0.7);
+}
+
+@media (min-width: 700px) {
+  .secondary-background {
+    background-position-y: initial !important;
+  }
 }
 
 .main-logo {
@@ -169,7 +240,8 @@ h6 {
   overflow: hidden;
 }
 
-.contact input, .contact textarea {
+.contact input,
+.contact textarea {
   background-color: var(--purple3);
 }
 
@@ -177,22 +249,26 @@ h6 {
   display: none;
 }
 
-.portfolio-preview .card-container {
+/* .portfolio-preview .card-container {
   min-height: 300px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
+} */
 
-.portfolio-card {
+/* .portfolio-card {
   margin: 2em 2em;
-}
+} */
 
-.card-text {
+/* .card-text {
   max-width: 200px;
   text-transform: capitalize;
+} */
+
+.card-img-top {
+  width: 100% !important;
 }
 
 .portfolio-page {
@@ -258,5 +334,5 @@ h6 {
 
 .card {
   background-color: var(--main1) !important;
-  filter: brightness(1.2)
+  filter: brightness(1.2);
 }

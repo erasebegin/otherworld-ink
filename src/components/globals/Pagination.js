@@ -16,6 +16,11 @@ export default function Pagination({ data, current }) {
       ) : (
         ""
       )}
+      <Link to="/portfolio">
+        <button className="btn btn-purple uppercase">
+          Return to Portfolio
+        </button>
+      </Link>
       {indexCurrent < slugArr.length ? (
         <Link to={`/portfolio/${next}`}>
           <button className="btn btn-purple uppercase">Next</button>
@@ -32,11 +37,6 @@ export function NextPost(props) {
   const indexCurrent = slugArr.indexOf(props.current);
   const next = slugArr[indexCurrent + 1];
   const firstPost = slugArr[0];
-
-  console.log("current index: ", indexCurrent);
-  console.log("current slug: ", slugArr[indexCurrent]);
-  console.log("last slug: ", slugArr[slugArr.length - 1]);
-  console.log("firstPost:", firstPost);
 
   if (slugArr[indexCurrent] === slugArr[slugArr.length - 1]) {
     return <Link to={`/portfolio/${firstPost}`}>{props.children}</Link>;

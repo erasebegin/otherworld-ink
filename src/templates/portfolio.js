@@ -11,12 +11,12 @@ const PortfolioEntry = ({ data }) => {
   return (
     <Layout>
       <SEO title={title} />
-      <div className="portfolio-page">
+      <div className="container">
         <Title title={title} styleClass="display-4 text-capitalize mt-4" />
         <div className="row">
-          <div className="col-lg-4 mx-auto ">
+          <div className="col-11 col-sm-8 col-lg-6 mx-auto text-center">
             <NextPost current={slug} data={data.allPosts.edges}>
-              <Img fixed={image.fixed} />
+              <Img fixed={image.fixed} className="img-fluid" />
             </NextPost>
             <div className="my-5 p-3">
               <p className="lead text-muted text-center">
