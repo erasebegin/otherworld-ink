@@ -39,9 +39,8 @@ const getProducts = graphql`
           price
           title
           image {
-            fixed(height: 200) {
+            fluid {
               src
-              ...GatsbyContentfulFixed_tracedSVG
             }
           }
         }

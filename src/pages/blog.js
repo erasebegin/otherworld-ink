@@ -28,11 +28,11 @@ const BlogPage = ({ data }) => {
                   key={node.id}
                 >
                   <div className="card card-cascade narrower" style={{ minHeight: "100%" }}>
-                    {/* <Link to={`/blog/${slug}`}>
+                    <Link to={`/blog/${node.slug}`}>
                       <Img fixed={node.image.fixed} className="card-img-top" />
-                    </Link> */}
+                    </Link>
                     <div className="view view-cascade gradient-card-header purple-gradient">
-                      <h2 className="card-header-title">{node.title}</h2>
+                      <h6 className="card-header-title">{node.title}</h6>
                     </div>
                     <div className="card-body text-center">
                       
