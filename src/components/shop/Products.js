@@ -14,12 +14,7 @@ export default function Products() {
               <Title title="Shop" />
               <div className="row">
                 {data.products.edges.map(({ node: product }) => {
-                  return (
-                    <Product
-                      key={product.id}
-                      product={product}
-                    />
-                  );
+                  return <Product key={product.id} product={product} />;
                 })}
               </div>
             </div>

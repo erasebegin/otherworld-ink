@@ -8,7 +8,6 @@ import Background from "../components/globals/Background";
 import SEO from "../components/seo";
 
 const BlogPage = ({ data }) => {
-
   return (
     <Layout>
       <SEO title="Blog" />
@@ -27,16 +26,17 @@ const BlogPage = ({ data }) => {
                   className="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-3"
                   key={node.id}
                 >
-                  <div className="card card-cascade narrower" style={{ minHeight: "100%" }}>
+                  <div
+                    className="card card-cascade narrower"
+                    style={{ minHeight: "100%" }}
+                  >
                     <Link to={`/blog/${node.slug}`}>
                       <Img fixed={node.image.fixed} className="card-img-top" />
                     </Link>
                     <div className="view view-cascade gradient-card-header purple-gradient">
                       <h6 className="card-header-title">{node.title}</h6>
                     </div>
-                    <div className="card-body text-center">
-                      
-                    </div>
+                    <div className="card-body text-center"></div>
                   </div>
                 </div>
               );

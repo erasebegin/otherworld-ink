@@ -17,9 +17,7 @@ export default function Pagination({ data, current, type }) {
         ""
       )}
       <Link to={`/${type}`}>
-        <button className="btn btn-purple uppercase">
-          Return to {type}
-        </button>
+        <button className="btn btn-purple uppercase">Return to {type}</button>
       </Link>
       {indexCurrent < slugArr.length ? (
         <Link to={`/portfolio/${next}`}>

@@ -317,3 +317,7 @@ h6 {
   background-color: var(--main1) !important;
   filter: brightness(1.2);
 }
+
+.article-body img {
+  max-width: 80%;
+}

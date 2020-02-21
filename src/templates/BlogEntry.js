@@ -1,24 +1,44 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Img from "gatsby-image";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Layout from "../components/layout";
 import Title from "../components/globals/Title";
 import Pagination from "../components/globals/Pagination";
 import SEO from "../components/seo";
 
 export default function BlogEntry({ data }) {
-  const { createdAt: date, id, image, title, slug } = data.contentfulBlogPost;
+  const {
+    createdAt: date,
+    id,
+    image,
+    title,
+    slug,
+    body
+  } = data.contentfulBlogPost;
+
+  const options = {
+    renderNode: {
+      "embedded-asset-block": node => {
+        const alt = node.data.target.fields.title["en-US"];
+        const url = node.data.target.fields.file["en-US"].url;
+        return <img alt={alt} src={url} />;
+      }
+    }
+  };
 
   return (
     <Layout>
       <SEO title={title} />
       <div className="container">
-        <Title title={title} styleClass="display-4 text-capitalize mt-4" />
-        <Img fixed={image.fixed}/>
+        <Title title={title} styleClass="display-4 text-capitalize mt-5" />
+
         <div className="row">
-          <div className="col-11 col-sm-8 col-lg-6 mx-auto text-center">
-            <div className="my-5 p-3">
-              <p className="lead text-muted text-center">"some description"</p>
+          <div className="col-11 col-sm-8 col-lg-10 mx-auto text-center">
+            <div className="mb-4 p-3">
+              <p className="lead text-muted text-center">{date}</p>
+            </div>
+            <div className="text-muted article-body">
+              {documentToReactComponents(body.json, options)}
             </div>
           </div>
         </div>
@@ -29,14 +49,18 @@ export default function BlogEntry({ data }) {
 }
 
 export const pageQuery = graphql`
-query($slug: String!) {
+  query($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       slug
+      createdAt(formatString: "MMMM Do, YYYY")
       image {
         fixed {
           ...GatsbyContentfulFixed_tracedSVG
         }
+      }
+      body {
+        json
       }
     }
 

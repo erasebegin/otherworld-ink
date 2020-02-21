@@ -48,14 +48,14 @@ exports.createPages = ({ graphql, actions }) => {
 
       result.data.allContentfulBlogPost.edges.forEach(edge => {
         createPage({
-          path:`/blog/${edge.node.slug}`,
+          path: `/blog/${edge.node.slug}`,
           component: slash(blogTemplate),
           context: {
             slug: edge.node.slug,
             id: edge.node.id
           }
-        })
-      })
+        });
+      });
     })
     .catch(error => {
       console.log("Error retrieving contentful data", error);

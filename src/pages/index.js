@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => (
         <img className="parallax para2" src={para2} />
       </Parallax>     
     </div>
-    <BlogPreview />
+    <BlogPreview data={data.blog}/>
     <PortfolioPreview data={data.portfolio} />
     <div className="about-btn-container">
       <Link to="/portfolio">
@@ -62,6 +62,20 @@ export const query = graphql`
       }
     }
     portfolio: allContentfulPortfolioEntry(limit: 1000) {
+      edges {
+        node {
+          id
+          slug
+          title
+          image {
+            fixed(height: 200, width: 200) {
+              ...GatsbyContentfulFixed_tracedSVG
+            }
+          }
+        }
+      }
+    }
+    blog: allContentfulBlogPost(limit: 8) {
       edges {
         node {
           id
