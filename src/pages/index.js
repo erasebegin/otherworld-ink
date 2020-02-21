@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby";
 import Parallax from "react-rellax";
 
 import Layout from "../components/layout";
+import BlogPreview from "../components/home/BlogPreview";
 import Info from "../components/home/Info";
 import PortfolioPreview from "../components/home/PortfolioPreview";
 import Contact from "../components/home/Contact";
@@ -32,21 +33,19 @@ const IndexPage = ({ data }) => (
       </Parallax>
       <Parallax speed={1} centered={true}>
         <img className="parallax para2" src={para2} />
-      </Parallax>
-      
-      
-      
+      </Parallax>     
+    </div>
+    <BlogPreview />
+    <PortfolioPreview data={data.portfolio} />
+    <div className="about-btn-container">
+      <Link to="/portfolio">
+        <button className="btn text-uppercase btn-purple">see more</button>
+      </Link>
     </div>
     <Info />
     <div className="about-btn-container">
       <Link to="/about/">
         <button className="btn text-uppercase btn-purple">read more</button>
-      </Link>
-    </div>
-    <PortfolioPreview data={data.portfolio} />
-    <div className="about-btn-container">
-      <Link to="/portfolio">
-        <button className="btn text-uppercase btn-purple">see more</button>
       </Link>
     </div>
     <Contact />

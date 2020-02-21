@@ -17,14 +17,16 @@ export default function PortfolioPreview({ data }) {
             {previewData.map(({ node }) => {
               return (
                 <div
-                  className="portfolio-card mx-auto my-3 mx-3 text-center"
+                  className="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-3"
                   key={node.id}
                 >
-                  <Link to={`/portfolio/${node.slug}`}>
-                    <Img fixed={node.image.fixed} />
-                  </Link>
-                  <div className="card-text">
-                    <h6 className="mb-0">{node.title}</h6>
+                  <div className="card">
+                    <Link to={`/portfolio/${node.slug}`} >
+                      <Img fixed={node.image.fixed} className="card-img-top"/>
+                    </Link>
+                    <div className="card-body text-center">
+                      <h6 className="mb-0">{node.title}</h6>
+                    </div>
                   </div>
                 </div>
               );

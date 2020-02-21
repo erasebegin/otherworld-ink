@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-export default function Pagination({ data, current }) {
+export default function Pagination({ data, current, type }) {
   const slugArr = data.map(i => i.node.slug);
   const indexCurrent = slugArr.indexOf(current);
   const prev = slugArr[indexCurrent - 1];
@@ -16,9 +16,9 @@ export default function Pagination({ data, current }) {
       ) : (
         ""
       )}
-      <Link to="/portfolio">
+      <Link to={`/${type}`}>
         <button className="btn btn-purple uppercase">
-          Return to Portfolio
+          Return to {type}
         </button>
       </Link>
       {indexCurrent < slugArr.length ? (

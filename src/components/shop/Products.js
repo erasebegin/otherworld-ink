@@ -3,26 +3,6 @@ import { StaticQuery, graphql } from "gatsby";
 import Product from "./Product";
 import Title from "../globals/Title";
 
-const getProducts = graphql`
-  {
-    products: allContentfulProduct {
-      edges {
-        node {
-          id
-          price
-          title
-          image {
-            fluid(maxHeight: 426) {
-              src
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
 export default function Products() {
   return (
     <StaticQuery
@@ -49,3 +29,23 @@ export default function Products() {
     />
   );
 }
+
+const getProducts = graphql`
+  {
+    products: allContentfulProduct {
+      edges {
+        node {
+          id
+          price
+          title
+          image {
+            fixed(height: 200) {
+              src
+              ...GatsbyContentfulFixed_tracedSVG
+            }
+          }
+        }
+      }
+    }
+  }
+`;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Image } from "gatsby";
+import { Link } from "gatsby";
 import logo from "../../images/otherworld-logo.svg";
 import { MdShoppingCart } from "react-icons/md";
 
@@ -14,8 +14,8 @@ export default function Navbar() {
     },
     {
       id: 2,
-      path: "/about",
-      text: "about"
+      path: "/blog",
+      text: "news"
     },
     {
       id: 3,
@@ -26,6 +26,11 @@ export default function Navbar() {
       id: 4,
       path: "/shop",
       text: "shop"
+    },
+    {
+      id: 5,
+      path: "/about",
+      text: "about"
     }
   ]);
 
