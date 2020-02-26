@@ -27,9 +27,11 @@ export default function BlogPreview({ data }) {
                   {/* item text */}
                   <div className="flex-grow-1 px-3">
                     <div className="justify-content-between">
-                      <h6 className="mb-0">
-                        <small>{node.title}</small>
-                      </h6>
+                      <Link to={`/blog/${node.slug}`}>
+                        <h6 className="mb-0">
+                          <small>{node.title}</small>
+                        </h6>
+                      </Link>
                       <p className="mb-0 text-muted">{node.createdAt}</p>
                     </div>
                     <p className="text-muted">

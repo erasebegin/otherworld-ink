@@ -20,23 +20,32 @@ const BlogPage = ({ data }) => {
         <div className="container">
           <Title title="news" />
           <div className="row">
-            {data.portfolio.edges.map(({ node }) => {
+            {data.blog.edges.map(({ node }) => {
               return (
                 <div
-                  className="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-3"
                   key={node.id}
+                  className="col-11 col-md-10 my-3 d-flex mx-auto"
                 >
-                  <div
-                    className="card card-cascade narrower"
-                    style={{ minHeight: "100%" }}
-                  >
+                  <div className="card-img-left">
                     <Link to={`/blog/${node.slug}`}>
-                      <Img fixed={node.image.fixed} className="card-img-top" />
+                      <Img fixed={node.image.fixed}/>
                     </Link>
-                    <div className="view view-cascade gradient-card-header purple-gradient">
-                      <h6 className="card-header-title">{node.title}</h6>
+                  </div>
+                  {/* item text */}
+                  <div className="flex-grow-1 px-3 my-0">
+                    <div className="justify-content-between">
+                      <div className="card-body">
+                        <Link to={`/blog/${node.slug}`}>
+                          <h6 className="mb-0 card-title">
+                            <small>{node.title}</small>
+                          </h6>
+                        </Link>
+                        <p className="mb-0 text-muted">{node.createdAt}</p>
+                        <p className="text-muted">
+                          <small>{node.description.description}</small>
+                        </p>
+                      </div>
                     </div>
-                    <div className="card-body text-center"></div>
                   </div>
                 </div>
               );
@@ -57,12 +66,16 @@ export const query = graphql`
         }
       }
     }
-    portfolio: allContentfulBlogPost(limit: 1000) {
+    blog: allContentfulBlogPost(limit: 1000) {
       edges {
         node {
           id
           title
           slug
+          createdAt(formatString: "MMMM Do, YYYY")
+          description {
+            description
+          }
           image {
             fixed(height: 220, width: 345) {
               ...GatsbyContentfulFixed_tracedSVG

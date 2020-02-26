@@ -10,7 +10,7 @@ export default function Pagination({ data, current, type }) {
   return (
     <div className="pagination-btn-container">
       {indexCurrent > 0 ? (
-        <Link to={`/portfolio/${prev}`}>
+        <Link to={`/${type}/${prev}`}>
           <button className="btn btn-purple uppercase">Previous</button>
         </Link>
       ) : (
@@ -20,7 +20,7 @@ export default function Pagination({ data, current, type }) {
         <button className="btn btn-purple uppercase">Return to {type}</button>
       </Link>
       {indexCurrent < slugArr.length ? (
-        <Link to={`/portfolio/${next}`}>
+        <Link to={`/${type}/${next}`}>
           <button className="btn btn-purple uppercase">Next</button>
         </Link>
       ) : (
