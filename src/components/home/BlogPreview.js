@@ -24,18 +24,18 @@ export default function BlogPreview({ data }) {
                   <Link to={`/blog/${node.slug}`}>
                     <Img fixed={node.image.fixed} />
                   </Link>
-                  {/* item text */}
+                  {/* card text */}
                   <div className="flex-grow-1 px-3">
                     <div className="justify-content-between">
                       <Link to={`/blog/${node.slug}`}>
-                        <h6 className="mb-0">
+                        <h4 className="mb-0">
                           <small>{node.title}</small>
-                        </h6>
+                        </h4>
                       </Link>
                       <p className="mb-0 text-muted">{node.createdAt}</p>
                     </div>
                     <p className="text-muted">
-                      <small>{node.description.description}</small>
+                      {node.description.description}
                     </p>
                   </div>
                 </div>

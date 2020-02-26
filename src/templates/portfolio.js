@@ -15,7 +15,7 @@ const PortfolioEntry = ({ data }) => {
         <Title title={title} styleClass="display-4 text-capitalize mt-4" />
         <div className="row">
           <div className="col-11 col-sm-8 col-lg-6 mx-auto text-center">
-            <NextPost current={slug} data={data.allPosts.edges}>
+            <NextPost current={slug} data={data.allPosts.edges} type="portfolio">
               <Img fixed={image.fixed} className="img-fluid" />
             </NextPost>
             <div className="my-5 p-3">
