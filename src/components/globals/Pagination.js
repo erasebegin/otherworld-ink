@@ -37,8 +37,8 @@ export function NextPost(props) {
   const firstPost = slugArr[0];
 
   if (slugArr[indexCurrent] === slugArr[slugArr.length - 1]) {
-    return <Link to={`/portfolio/${firstPost}`}>{props.children}</Link>;
+    return <Link to={`/${type}/${firstPost}`}>{props.children}</Link>;
   } else {
-    return <Link to={`/portfolio/${next}`}>{props.children}</Link>;
+    return <Link to={`/${type}/${next}`}>{props.children}</Link>;
   }
 }
