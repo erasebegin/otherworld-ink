@@ -249,8 +249,25 @@ h6 {
   display: none;
 }
 
+/* CARDS */
+
+.card {
+  background-color: var(--main1) !important;
+  filter: brightness(1.2);
+}
+
 .card-img-top {
   width: 100% !important;
+}
+
+@media(max-width: 800px) {
+  .card-img {
+    display: none;
+  }
+
+  .news-card-title {
+    font-size: 1rem;
+  }
 }
 
 .portfolio-page {
@@ -314,11 +331,10 @@ h6 {
   filter: brightness(1.2);
 }
 
-.card {
-  background-color: var(--main1) !important;
-  filter: brightness(1.2);
-}
-
 .article-body img {
   max-width: 80%;
+}
+
+.gatsby-link:hover {
+  text-decoration: none !important;
 }

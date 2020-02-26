@@ -24,26 +24,30 @@ const BlogPage = ({ data }) => {
               return (
                 <div
                   key={node.id}
-                  className="col-11 col-md-10 my-3 d-flex mx-auto"
+                  className="col-11 my-3 d-flex mx-auto card"
                 >
-                  <div className="card-img-left">
-                    <Link to={`/blog/${node.slug}`}>
-                      <Img fixed={node.image.fixed}/>
-                    </Link>
-                  </div>
-                  {/* item text */}
-                  <div className="flex-grow-1 px-3 my-0">
-                    <div className="justify-content-between">
+                  <div className="row no-gutters">
+                    <div className="col-md-4 col-sm-3 card-img img-responsive">
+                      <Link to={`/blog/${node.slug}`}>
+                        <Img fixed={node.image.fixed} />
+                      </Link>
+                    </div>
+                    {/* card text */}
+                    <div className="col-md-8 col-sm-9 flex-grow-1">
                       <div className="card-body">
-                        <Link to={`/blog/${node.slug}`}>
-                          <h6 className="mb-0 card-title">
-                            <small>{node.title}</small>
-                          </h6>
+                        <Link
+                          to={`/blog/${node.slug}`}
+                          className="card-title news-card-title gatsby-link"
+                        >
+                          <h4 className="mb-0">{node.title}</h4>
                         </Link>
-                        <p className="mb-0 text-muted">{node.createdAt}</p>
-                        <p className="text-muted">
-                          <small>{node.description.description}</small>
-                        </p>
+                        <div className="card-text">
+                          <p className="mb-0 text-muted">{node.createdAt}</p>
+
+                          <p className="text-muted">
+                            {node.description.description}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -59,7 +63,7 @@ const BlogPage = ({ data }) => {
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "tao-gas-master.jpg" }) {
+    img: file(relativePath: { eq: "televirtual.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG

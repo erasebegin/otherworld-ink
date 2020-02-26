@@ -1,11 +1,14 @@
 import React from "react";
-import Title from "../globals/Title"
+import {Link} from "gatsby";
+import Title from "../globals/Title";
 
 export default function about() {
   return (
     <section className="py-4">
       <div className="container">
-        <Title title="My Story" />
+        <Link to="/about" className="gatsby-link">
+          <Title title="My Story" />
+        </Link>
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
             <p className="lead text-muted">
