@@ -5,9 +5,10 @@ import Img from "gatsby-image";
 
 export default function BlogPreview({ data }) {
   const previewData = data.edges.slice(0, 4);
+  console.log(previewData);
 
   if (data.edges.length === 0) {
-    return <div className="muted">Nothing to display</div>;
+    return <div className="text-muted">Nothing to display</div>;
   } else {
     return (
       <section className="portfolio-preview py-5">
@@ -17,16 +18,23 @@ export default function BlogPreview({ data }) {
             {previewData.map(({ node }) => {
               return (
                 <div
-                  className="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-3"
                   key={node.id}
+                  className="col-11 col-md-10 my-3 d-flex mx-auto"
                 >
-                  <div className="card">
-                    <Link to={`/blog/${node.slug}`} >
-                      <Img fixed={node.image.fixed} className="card-img-top"/>
-                    </Link>
-                    <div className="card-body text-center">
-                      <h6 className="mb-0">{node.title}</h6>
+                  <Link to={`/blog/${node.slug}`}>
+                    <Img fixed={node.image.fixed} />
+                  </Link>
+                  {/* item text */}
+                  <div className="flex-grow-1 px-3">
+                    <div className="justify-content-between">
+                      <h6 className="mb-0">
+                        <small>{node.title}</small>
+                      </h6>
+                      <p className="mb-0 text-muted">{node.createdAt}</p>
                     </div>
+                    <p className="text-muted">
+                      <small>{node.description.description}</small>
+                    </p>
                   </div>
                 </div>
               );

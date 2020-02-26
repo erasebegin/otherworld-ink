@@ -81,6 +81,10 @@ export const query = graphql`
           id
           slug
           title
+          createdAt(formatString: "MMMM Do, YYYY")
+          description {
+            description
+          }
           image {
             fixed(height: 200, width: 200) {
               ...GatsbyContentfulFixed_tracedSVG

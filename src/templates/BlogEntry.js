@@ -9,8 +9,6 @@ import SEO from "../components/seo";
 export default function BlogEntry({ data }) {
   const {
     createdAt: date,
-    id,
-    image,
     title,
     slug,
     body
@@ -19,6 +17,7 @@ export default function BlogEntry({ data }) {
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
+        console.log("logging:",node.data.target)
         const alt = node.data.target.fields.title["en-US"];
         const url = node.data.target.fields.file["en-US"].url;
         return <img alt={alt} src={url} />;
