@@ -13,5 +13,5 @@ export default function Title({ title, styleClass }) {
 
 Title.defaultProps = {
   title: "default title",
-  styleClass: "display-4 text-capitalize"
+  styleClass: "display-4 text-capitalize main-page-title"
 };
