@@ -245,9 +245,19 @@ h6 {
   overflow: hidden;
 }
 
+/* CONTACT */
+
 .contact input,
 .contact textarea {
-  background-color: var(--purple3);
+  background-color: rgb(61, 61, 61);
+  color: white;
+  border: black;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  background-color: rgb(61, 61, 61);
+  color: white;
 }
 
 .contact label {
