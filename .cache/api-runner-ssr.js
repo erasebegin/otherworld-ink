@@ -1,11 +1,11 @@
 var plugins = [{
-      plugin: require('C:/Users/Chris/Documents/Repos/otherworld-ink/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('D:/Repos/otherworld-ink/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('C:/Users/Chris/Documents/Repos/otherworld-ink/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('D:/Repos/otherworld-ink/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/otherworld-logo.svg"},
     },{
-      plugin: require('C:/Users/Chris/Documents/Repos/otherworld-ink/node_modules/gatsby-plugin-snipcart/gatsby-ssr'),
+      plugin: require('D:/Repos/otherworld-ink/node_modules/gatsby-plugin-snipcart/gatsby-ssr'),
       options: {"plugins":[],"apiKey":"MzBmN2Y2NzktOWJjNS00MmRkLThlNjItODk5ZjY1NTM5ODk3NjM3MTY5NTQ2NDc2ODAxNTk3","autopop":true},
     }]
 // During bootstrap, we write requires at top of this file which looks like:

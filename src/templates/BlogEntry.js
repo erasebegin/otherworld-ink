@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { MARKS } from '@contentful/rich-text-types';
 import Layout from "../components/layout";
 import Title from "../components/globals/Title";
 import Pagination from "../components/globals/Pagination";
@@ -17,12 +18,12 @@ export default function BlogEntry({ data }) {
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
-        console.log("logging:",node.data.target)
         const alt = node.data.target.fields.title["en-US"];
         const url = node.data.target.fields.file["en-US"].url;
         return <img alt={alt} src={url} />;
       }
-    }
+    },
+    renderMark: { [MARKS.CODE]: embedded => <div dangerouslySetInnerHTML={{__html: embedded }} /> }
   };
 
   return (
