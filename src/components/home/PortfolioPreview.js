@@ -11,7 +11,9 @@ export default function PortfolioPreview({ data }) {
   } else {
     return (
       <section className="portfolio-preview py-5">
-        <Title title="portfolio" />
+        <Link to="/portfolio" className="gatsby-link">
+          <Title title="portfolio" />
+        </Link>
         <div className="container">
           <div className="row">
             {previewData.map(({ node }) => {
@@ -21,8 +23,8 @@ export default function PortfolioPreview({ data }) {
                   key={node.id}
                 >
                   <div className="card">
-                    <Link to={`/portfolio/${node.slug}`} >
-                      <Img fixed={node.image.fixed} className="card-img-top"/>
+                    <Link to={`/portfolio/${node.slug}`}>
+                      <Img fixed={node.image.fixed} className="card-img-top" />
                     </Link>
                     <div className="card-body text-center">
                       <h6 className="mb-0">{node.title}</h6>

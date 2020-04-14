@@ -1,7 +1,6 @@
 import React from "react";
 import BackgroundImage from "gatsby-background-image";
 import logo from "../../images/otherworld-logo.svg";
-import "./gradient-animation.css";
 
 export default function Background({ img, styleClass, title, children }) {
   return (
@@ -11,9 +10,6 @@ export default function Background({ img, styleClass, title, children }) {
       </h1>
       <img src={logo} className="main-logo"></img>
       {/* color divs are for gradient animation */}
-      <div id="blue"></div>
-      <div id="red"></div>
-      <div id="green"></div>
       {children}
     </BackgroundImage>
   );
