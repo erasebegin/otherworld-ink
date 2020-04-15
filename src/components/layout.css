@@ -353,3 +353,14 @@ h6 {
 .gatsby-link:hover {
   text-decoration: none !important;
 }
+
+iframe {
+  max-width: 90%;
+}
+
+/* @media (max-width: 700px) {
+  iframe {
+    max-width: 200px;
+    max-height: 800px;
+  }
+} */

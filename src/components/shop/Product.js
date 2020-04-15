@@ -15,6 +15,7 @@ export default function Product({ product }) {
             data-item-url="https://www.otherworldink.com/shop"
             data-item-image={product.image.fluid.src}
             data-item-name={product.title}
+            data-item-file-guid={product.guid}
           >
             Buy
           </button>

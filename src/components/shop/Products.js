@@ -31,6 +31,7 @@ const getProducts = graphql`
       edges {
         node {
           id
+          guid
           price
           title
           image {
