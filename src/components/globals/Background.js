@@ -9,7 +9,6 @@ export default function Background({ img, styleClass, title, children }) {
         {title}
       </h1>
       <img src={logo} className="main-logo"></img>
-      {/* color divs are for gradient animation */}
       {children}
     </BackgroundImage>
   );

@@ -103,6 +103,21 @@ h6 {
   filter: brightness(0.8);
 }
 
+/* SHOP PAGE ONLY */
+
+.transaction-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.transaction-logo-container img {
+  max-height: 50px;
+  border-radius: 5px;
+  margin: 20px 0 20px 10px;
+}
+
 /* PARALLAX IMAGE STYLES */
 
 .parallax-container {
