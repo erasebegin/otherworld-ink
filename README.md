@@ -1,4 +1,4 @@
-###Welcome to the home of
+### Welcome to the home of
 # Otherworld Ink
 
 - Site built using Gatsby and React with Snipcart implemented for cart and payments.
