@@ -1,12 +1,12 @@
 var plugins = [{
-      plugin: require('/home/chris/gits/otherworld-ink/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/home/chris/repos/otherworld-ink/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/home/chris/gits/otherworld-ink/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/home/chris/repos/otherworld-ink/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/otherworld-logo.svg"},
     },{
-      plugin: require('/home/chris/gits/otherworld-ink/node_modules/gatsby-plugin-snipcart/gatsby-ssr'),
-      options: {"plugins":[],"apiKey":"NmI1ZTYxYzUtNjVmMy00MmZiLTg5M2YtNDU0NWIwMzE0OWYwNjM3MTY5NTQ2NDc2ODAxNTk3","autopop":true},
+      plugin: require('/home/chris/repos/otherworld-ink/node_modules/gatsby-plugin-snipcart/gatsby-ssr'),
+      options: {"plugins":[],"apiKey":"MzBmN2Y2NzktOWJjNS00MmRkLThlNjItODk5ZjY1NTM5ODk3NjM3MTY5NTQ2NDc2ODAxNTk3","autopop":true},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
