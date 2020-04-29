@@ -9,13 +9,7 @@ export default function Product({ product }) {
           <h6>{product.title}</h6>
           <h6>${product.price} </h6>
           <button
-            className="btn btn-purple mt-3 text-capitalize snipcart-add-item"
-            data-item-id={product.id}
-            data-item-price={product.price}
-            data-item-url="https://www.otherworldink.com/shop"
-            data-item-image={product.image.fluid.src}
-            data-item-name={product.title}
-            data-item-file-guid={product.guid}
+            className="btn btn-purple mt-3 text-capitalize
           >
             Buy
           </button>
