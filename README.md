@@ -1,7 +1,9 @@
 ### Welcome to the home of
 # Otherworld Ink
 
-- Site built using Gatsby and React with Snipcart implemented for cart and payments.
+- Site built using Gatsby and React
+
+- Custom ecommerce platform using PayPal as payment gateway.
 
 - Site includes portfolio, blog and shop.
 
