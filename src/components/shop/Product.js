@@ -6,8 +6,8 @@ import { MdShoppingCart } from "react-icons/md";
 import PayPalButton from '../cart/PayPalButton';
 
 export default function Product({ product, history }) {
-    const { inCart, img, info, title, price, id } = product
-    const { addToCart, handleDetail, contextTotal, clearCart } = useContext(CartContext)
+    const { inCart, img, title, price, id } = product
+    const { addToCart, handleDetail, clearCart } = useContext(CartContext)
     return (
 
         <Card className="mx-auto my-3 col-9 col-md-6 col-lg-3">
