@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{VsJp:function(e,n,a){"use strict";a.r(n),a.d(n,"query",(function(){return d}));var t=a("q1tI"),r=a.n(t),i=a("9eSz"),u=a.n(i),l=a("Bl7J"),c=a("vrFN"),d="349923629";n.default=function(e){var n=e.data;return r.a.createElement(l.a,null,r.a.createElement(c.a,{title:"Terms and Conditions"}),r.a.createElement(u.a,{fluid:n.img.childImageSharp.fluid}))}}}]);
+//# sourceMappingURL=component---src-pages-terms-and-conditions-js-75b68ad2d843f4a5d9ab.js.map

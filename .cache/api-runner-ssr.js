@@ -7,6 +7,9 @@ var plugins = [{
     },{
       plugin: require('/home/chris/repos/otherworld-ink/node_modules/gatsby-plugin-snipcart/gatsby-ssr'),
       options: {"plugins":[],"apiKey":"MzBmN2Y2NzktOWJjNS00MmRkLThlNjItODk5ZjY1NTM5ODk3NjM3MTY5NTQ2NDc2ODAxNTk3","autopop":true},
+    },{
+      plugin: require('/home/chris/repos/otherworld-ink/gatsby-ssr'),
+      options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
