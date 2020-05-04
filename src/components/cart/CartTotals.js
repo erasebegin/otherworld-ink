@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'gatsby';
-import { CartContext } from '../../../CartContext';
+import { CartContext } from '../../CartContext';
 import PayPalButton from './PayPalButton'
 
 export default function CartTotals({ history }) {

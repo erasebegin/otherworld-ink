@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import Title from '../globals/Title';
 import Product from './Product';
-import {CartContext} from '../../../CartContext';
+import {CartContext} from '../../CartContext';
 
 export default function ProductList() {
     const {products}  = useContext(CartContext)

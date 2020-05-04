@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { CartContext } from '../../CartContext';
+import { CartContext } from '../CartContext';
 import Layout from '../components/layout'
 import Title from '../components/globals/Title';
 import CartColumns from '../components/cart/CartColumns';

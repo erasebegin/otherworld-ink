@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { CartContext } from '../../../CartContext';
+import { CartContext } from '../../CartContext';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { MdShoppingCart } from "react-icons/md";
