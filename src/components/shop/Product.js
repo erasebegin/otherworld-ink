@@ -39,7 +39,7 @@ const Card = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: var(--purple3);
     border-radius: 10px;
     padding: 1em;
     transition: 200ms ease-in-out;
