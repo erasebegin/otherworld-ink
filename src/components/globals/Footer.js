@@ -49,6 +49,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
+        <a href="https://www.paypal.com/us/webapps/mpp/ua/acceptableuse-full">Terms and Conditions</a>
       </div>
     </footer>
   );
