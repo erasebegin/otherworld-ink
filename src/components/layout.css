@@ -38,13 +38,13 @@ h6 {
     59deg,
     rgb(39, 73, 111),
     rgb(53, 31, 83),
-    #d3b2ff
+    #4600a1
   );
   background-size: 400% 400%;
 
-  -webkit-animation: nav-gradient 6s ease infinite;
-  -moz-animation: nav-gradient 6s ease infinite;
-  animation: nav-gradient 6s ease infinite;
+  -webkit-animation: nav-gradient 30s ease infinite;
+  -moz-animation: nav-gradient 30s ease infinite;
+  animation: nav-gradient 30s ease infinite;
 
   @-webkit-keyframes nav-gradient {
     0% {
@@ -306,7 +306,7 @@ h6 {
   overflow: hidden;
 }
 
-.footer {
+/* .footer {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -352,7 +352,7 @@ h6 {
       background-position: 0% 52%;
     }
   }
-}
+} */
 
 .contact-list {
   margin: auto;

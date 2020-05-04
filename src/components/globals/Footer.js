@@ -5,10 +5,11 @@ import {
   FaInstagram,
   FaEnvelopeSquare
 } from "react-icons/fa";
+import styled from 'styled-components';
 
 export default function Footer() {
   return (
-    <footer className="footer py-3">
+    <FooterStyled className="py-3">
       <div className="container">
         <div className="row">
           <div className="col-10 mx-auto col-md-6 text-center text-capitalize">
@@ -49,8 +50,69 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <a href="https://www.paypal.com/us/webapps/mpp/ua/acceptableuse-full">Terms and Conditions</a>
+        <div className="col-10 mx-auto col-md-6 text-center text-capitalize">
+            <h5>
+              <a href="https://www.paypal.com/us/webapps/mpp/ua/acceptableuse-full" className="terms-link">Terms and Conditions</a>
+            </h5>
+          </div>
       </div>
-    </footer>
+    </FooterStyled>
   );
 }
+
+const FooterStyled = styled.footer`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: var(--purple3);
+  background: linear-gradient(59deg, #27496f, #351f53, #4600a1);
+  background-size: 400% 400%;
+
+  -webkit-animation: nav-gradient 20s ease infinite;
+  -moz-animation: nav-gradient 20s ease infinite;
+  animation: nav-gradient 20s ease infinite;
+
+  @-webkit-keyframes nav-gradient {
+    0% {
+      background-position: 0% 52%;
+    }
+    50% {
+      background-position: 100% 49%;
+    }
+    100% {
+      background-position: 0% 52%;
+    }
+  }
+  @-moz-keyframes nav-gradient {
+    0% {
+      background-position: 0% 52%;
+    }
+    50% {
+      background-position: 100% 49%;
+    }
+    100% {
+      background-position: 0% 52%;
+    }
+  }
+  @keyframes nav-gradient {
+    0% {
+      background-position: 0% 52%;
+    }
+    50% {
+      background-position: 100% 49%;
+    }
+    100% {
+      background-position: 0% 52%;
+    }
+  }
+
+  .terms-link {
+    text-decoration: none;
+    color: var(--purple3);
+    font-size: 1.2rem;
+    &:hover {
+      filter: brightness(0.9)
+    }
+  }
+`
