@@ -3,10 +3,9 @@ import React from "react";
 export default function Title({ title, styleClass }) {
   return (
     <div className="row">
-        <div className="col text-center mb-3">
+        <div className="col text-center my-4">
         <h1 className={styleClass}>{title}</h1>
         </div>
-      
     </div>
   );
 }

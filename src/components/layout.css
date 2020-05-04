@@ -10,6 +10,8 @@
   --purple4: rgb(211, 178, 255);
   margin: 0;
   padding: 0;
+  min-height: 100%;
+  position: relative;
 }
 
 body {
@@ -305,6 +307,10 @@ h6 {
 }
 
 .footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   color: var(--purple3);
   background: linear-gradient(59deg, #27496f, #351f53, #d3b2ff);
   background-size: 400% 400%;

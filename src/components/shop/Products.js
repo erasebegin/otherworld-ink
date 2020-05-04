@@ -1,46 +1,20 @@
-import React from "react";
-import { StaticQuery, graphql } from "gatsby";
-import Product from "./Product";
-import Title from "../globals/Title";
+import React, {useContext} from 'react';
+import Title from '../globals/Title';
+import Product from './Product';
+import {CartContext} from '../../../CartContext';
 
-export default function Products() {
-  return (
-    <StaticQuery
-      query={getProducts}
-      render={data => {
-        return (
-          <section className="py-5">
-            <div className="container">
-              <Title title="Shop" />
-              <div className="row">
-                {data.products.edges.map(({ node: product }) => {
-                  return <Product key={product.id} product={product} />;
-                })}
-              </div>
+export default function ProductList() {
+    const {products}  = useContext(CartContext)
+    return (
+        <React.Fragment>
+            <div className="py5 my-5">
+                <div className="container">
+                <Title title="shop" />
+                    <div className="row">
+                        {products.map((product)=>(<Product product={product} key={product.id}/>))}                   
+                    </div>
+                </div>
             </div>
-          </section>
-        );
-      }}
-    />
-  );
+        </React.Fragment>
+    )
 }
-
-const getProducts = graphql`
-  {
-    products: allContentfulProduct {
-      edges {
-        node {
-          id
-          guid
-          price
-          title
-          image {
-            fluid {
-              src
-            }
-          }
-        }
-      }
-    }
-  }
-`;

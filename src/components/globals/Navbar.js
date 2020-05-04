@@ -35,7 +35,7 @@ export default function Navbar() {
   ]);
 
   const navbarHandler = () => {
-    if(navOpen){
+    if (navOpen) {
       setNavOpen(false)
       setNavCss("collapse navbar-collapse")
       console.log("navbar is closed")
@@ -49,7 +49,7 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark">
       <Link to="/" className="navbar-brand">
-        <img src={logo} alt="logo"/>
+        <img src={logo} alt="logo" />
       </Link>
       <button className="navbar-toggler" type="button" onClick={navbarHandler}>
         <span className="navbar-toggler-icon"></span>
@@ -66,7 +66,7 @@ export default function Navbar() {
             );
           })}
           <li>
-            <MdShoppingCart className="cart-icon snipcart-checkout" />
+            <Link to="/cart" className="cart-icon"><MdShoppingCart /></Link>
           </li>
         </ul>
       </div>

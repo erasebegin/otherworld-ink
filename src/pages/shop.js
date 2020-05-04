@@ -11,6 +11,7 @@ import logo4 from "../images/mastercard_securecode_logo.jpg";
 import logo5 from "../images/dpo_paygate_logo.jpg";
 
 export default function Shop({ data }) {
+
   return (
     <div>
       <Layout>
@@ -20,14 +21,14 @@ export default function Shop({ data }) {
           styleClass="secondary-background"
         />
         <Products />
-        <div class="transaction-logo-container">
+        <div className="transaction-logo-container">
           <img src={logo1} />
           <img src={logo2} />
           <img src={logo3} />
           <img src={logo4} />
           <img src={logo5} />
         </div>
-        <p class="text-muted text-center">Click here for <Link to="/terms-and-conditions">terms and conditions</Link></p>
+        <p className="text-muted text-center">Click here for <Link to="/terms-and-conditions">terms and conditions</Link></p>
       </Layout>
     </div>
   );
