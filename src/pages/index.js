@@ -19,19 +19,19 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <div className="parallax-container">
-      <Parallax speed={-3} centered={true}>
+      <Parallax speed={-5} centered={true}>
         <img className="parallax para1" src={para1} />
       </Parallax>
-      <Parallax speed={-1} centered={true}>
+      <Parallax speed={-5} centered={true}>
         <img className="parallax para4" src={para4} />
       </Parallax>
-      <Parallax speed={-2} centered={true}>
+      <Parallax speed={-3} centered={true}>
         <img className="parallax para3" src={para3} />
       </Parallax>
-      <Parallax speed={1} centered={true}>
+      <Parallax speed={-7} centered={true}>
         <img className="parallax para5" src={logo} />
       </Parallax>
-      <Parallax speed={1} centered={true}>
+      <Parallax speed={3} centered={true}>
         <img className="parallax para2" src={para2} />
       </Parallax>     
     </div>

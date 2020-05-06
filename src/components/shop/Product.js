@@ -12,9 +12,9 @@ export default function Product({ product, history }) {
 
         <Card className="mx-auto my-3 col-9 col-md-6 col-lg-3">
             <div className="img-container">
-                <Link to="/details" onClick={() => handleDetail(id)}>
+                {/* <Link to="/details" onClick={() => handleDetail(id)}> */}
                     <img className="card-img-top" src={img} alt={title} />
-                </Link>
+                {/* </Link> */}
                 <button disabled={inCart ? true : false} onClick={() => addToCart(id)}>
                     {inCart ? <Link to="/cart" className="cart-link">in cart</Link> : <MdShoppingCart />}
                 </button>

@@ -5,11 +5,12 @@ import {
   FaInstagram,
   FaEnvelopeSquare
 } from "react-icons/fa";
+import { Link } from 'gatsby'
 import styled from 'styled-components';
 
 export default function Footer() {
   return (
-    <FooterStyled className="py-3">
+    <FooterStyled className="py-4">
       <div className="container">
         <div className="row">
           <div className="col-10 mx-auto col-md-6 text-center text-capitalize">
@@ -51,17 +52,17 @@ export default function Footer() {
           </ul>
         </div>
         <div className="col-10 mx-auto col-md-6 text-center text-capitalize">
-            <h5>
-              <a href="https://www.paypal.com/us/webapps/mpp/ua/acceptableuse-full" className="terms-link">Terms and Conditions</a>
-            </h5>
-          </div>
+          <h5>
+            <Link to="/legal" className="terms-link">Our Policies</Link>
+          </h5>
+        </div>
       </div>
     </FooterStyled>
   );
 }
 
 const FooterStyled = styled.footer`
-  position: absolute;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
