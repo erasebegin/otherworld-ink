@@ -6,8 +6,8 @@ import { MdShoppingCart } from "react-icons/md";
 import PayPalButton from '../cart/PayPalButton';
 
 export default function Product({ product, history }) {
-    const { inCart, img, title, price, id } = product
-    const { addToCart, handleDetail, clearCart } = useContext(CartContext)
+    const { inCart, img, title, price, id, caption } = product
+    const { addToCart, clearCart } = useContext(CartContext)
     return (
 
         <Card className="mx-auto my-3 col-9 col-md-6 col-lg-3">
@@ -20,7 +20,7 @@ export default function Product({ product, history }) {
                 </button>
             </div>
             <h4 className="text-center my-2">{title}</h4>
-            <p className="description"></p>
+            <p className="caption">{caption}</p>
             <p className="price">${price}</p>
             <PayPalButton
                 totalAmount={price}
@@ -79,7 +79,7 @@ const Card = styled.div`
         font-weight: 800;
     }
 
-    .description {
+    .caption {
         color: var(--pink);
     }
 

@@ -10,7 +10,7 @@ export default function PortfolioPreview({ data }) {
     return <div></div>;
   } else {
     return (
-      <section className="portfolio-preview py-5">
+      <section className="portfolio-preview">
         <Link to="/portfolio" className="gatsby-link">
           <Title title="portfolio" />
         </Link>
