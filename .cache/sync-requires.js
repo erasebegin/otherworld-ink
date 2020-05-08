@@ -13,6 +13,7 @@ exports.components = {
   "component---src-pages-index-js": hot(preferDefault(require("/home/chris/repos/otherworld-ink/src/pages/index.js"))),
   "component---src-pages-legal-js": hot(preferDefault(require("/home/chris/repos/otherworld-ink/src/pages/legal.js"))),
   "component---src-pages-portfolio-js": hot(preferDefault(require("/home/chris/repos/otherworld-ink/src/pages/portfolio.js"))),
+  "component---src-pages-purchase-complete-js": hot(preferDefault(require("/home/chris/repos/otherworld-ink/src/pages/purchase-complete.js"))),
   "component---src-pages-shop-js": hot(preferDefault(require("/home/chris/repos/otherworld-ink/src/pages/shop.js"))),
   "component---src-templates-blog-entry-js": hot(preferDefault(require("/home/chris/repos/otherworld-ink/src/templates/BlogEntry.js"))),
   "component---src-templates-portfolio-js": hot(preferDefault(require("/home/chris/repos/otherworld-ink/src/templates/portfolio.js")))

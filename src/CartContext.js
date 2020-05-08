@@ -7,6 +7,8 @@ export function CartProvider(props) {
     const [products, setProducts] = useState([])
     const [detail, setDetail] = useState([])
     const [cart, setCart] = useState([])
+    const [purchaseComplete, setPurchaseComplete] = useState(false)
+    const [purchase, setPurchased] = useState([])
 
     useEffect(() => {
         getProducts()
@@ -83,6 +85,9 @@ export function CartProvider(props) {
     }
 
     const clearCart = () => {
+        if(purchaseComplete === true) {
+            setPurchased(cart)
+        }
         setCart([])
         getProducts()
     }
@@ -97,7 +102,9 @@ export function CartProvider(props) {
             increment,
             decrement,
             removeItem,
-            clearCart
+            clearCart,
+            purchaseComplete,
+            setPurchaseComplete
         }}>
             {props.children}
         </CartContext.Provider>

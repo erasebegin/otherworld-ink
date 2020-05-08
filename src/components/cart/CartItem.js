@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../../CartContext';
+import CartButtons from './CartButtons';
 import styled from 'styled-components';
-import {BsTrashFill} from 'react-icons/bs'
 
 export default function CartItem({ item }) {
 
     const { id, total, img, price, title, count } = item
-    const { increment, decrement, removeItem } = useContext(CartContext)
+    const { purchaseComplete } = useContext(CartContext)
 
     return (
         <List className="row my-1 text-capitalize text-center">
@@ -18,51 +18,25 @@ export default function CartItem({ item }) {
                     alt=""
                 />
             </div>
-            <div className="col-10 mx-auto col-lg-2 ">
+            <div className="col-10 mx-auto col-lg-2 spaced">
                 <span className="d-lg-none">product :</span> {title}
             </div>
-            <div className="col-10 mx-auto col-lg-2 ">
+            <div className="col-10 mx-auto col-lg-2 spaced">
                 <strong>
                     <span className="d-lg-none">price :</span> ${price}
                 </strong>
             </div>
-            <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0 ">
-                <div className="d-flex justify-content-center">
-                    <div>
-                        <span
-                            className="btn btn-light mx-1"
-                            onClick={() => {
-                                return decrement(id);
-                            }}
-                        >
-                            -
-              </span>
-                        <span className="btn btn-light mx-1">{count}</span>
-                        <span
-                            className="btn btn-light mx-1"
-                            onClick={() => {
-                                return increment(id);
-                            }}
-                        >
-                            +
-              </span>
-                    </div>
-                </div>
-            </div>
-            <div className="col-10 mx-auto col-lg-2 ">
-                <div className="remove-button" onClick={() => removeItem(id)}>
-                    <BsTrashFill />
-                </div>
-            </div>
+            
+            { purchaseComplete ? "" : <CartButtons count = {count} id = {id}/> }
 
-            <div className="col-10 mx-auto col-lg-2 ">
+            <div className="col-10 mx-auto col-lg-2 spaced">
                 <strong>item total : ${total} </strong>
             </div>
         </List>
     )
 }
 
-const List  = styled.div`
+const List = styled.div`
     color: var(--purple3);
 
     .remove-button{
@@ -70,6 +44,13 @@ const List  = styled.div`
     &:hover {
         filter: brightness(0.9);
         cursor: pointer;
-    }}
+    }
+}
+
+@media(max-width: 900px){
+    .spaced {
+        margin: .5em 0;
+    }
+}
 
 `

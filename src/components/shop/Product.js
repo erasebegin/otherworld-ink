@@ -7,7 +7,7 @@ import PayPalButton from '../cart/PayPalButton';
 
 export default function Product({ product, history }) {
     const { inCart, img, title, price, id, caption } = product
-    const { addToCart, clearCart } = useContext(CartContext)
+    const { addToCart, clearCart, setPurchaseComplete } = useContext(CartContext)
     return (
 
         <Card className="mx-auto my-3 col-9 col-md-6 col-lg-3">
@@ -25,6 +25,8 @@ export default function Product({ product, history }) {
             <PayPalButton
                 totalAmount={price}
                 clearCart={clearCart}
+                purchaseComplete={()=>setPurchaseComplete(true)}
+                addToCart={() => addToCart(id)}
                 history={history}
             />
         </Card>
