@@ -5,14 +5,14 @@ import styled from 'styled-components';
 
 export default function CartItem({ item }) {
 
-    const { id, total, img, price, title, count } = item
+    const { id, total, image, price, title, count } = item
     const { purchaseComplete } = useContext(CartContext)
 
     return (
         <List className="row my-1 text-capitalize text-center">
             <div className="col-10 mx-auto col-lg-2">
                 <img
-                    src={img}
+                    src={image.fields.file.url}
                     style={{ width: "5rem", heigth: "5rem" }}
                     className="img-fluid"
                     alt=""

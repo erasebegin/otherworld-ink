@@ -10,32 +10,44 @@ export function CartProvider(props) {
   const [cart, setCart] = useState([]);
   const [purchaseComplete, setPurchaseComplete] = useState(false);
   const [purchase, setPurchased] = useState([]);
-  const [ctf, setCTF] = useState([]);
 
-  console.log(ctf);
+  // const getProducts = () => {
+  //   let tempProducts = [];
+  //   storeProducts.forEach((item) => {
+  //     const singleItem = { ...item };
+  //     tempProducts = [...tempProducts, singleItem];
+  //   });
+  //   setProducts(tempProducts);
+  // };
 
-  const getProducts = () => {
-    let tempProducts = [];
-    storeProducts.forEach((item) => {
-      const singleItem = { ...item };
-      tempProducts = [...tempProducts, singleItem];
+  const createProductsArray = (items) => {
+    items.forEach((item) => {
+      item.fields["inCart"] = false;
+      item.fields["id"] = item.sys.id;
+      item.fields["count"] = 0;
+      item.fields["total"] = 0;
     });
-    setProducts(tempProducts);
+
+    let newArr = [];
+
+    items.forEach((item) => {
+      newArr.push(item.fields);
+    });
+    console.log(newArr)
+    setProducts(newArr)
   };
 
   useEffect(() => {
-    // getProducts();
     client
       .getEntries({ content_type: "product" })
       .then((response) => {
-        console.log(response.items);
-        setProducts(response.items);
+        createProductsArray(response.items);
       })
       .catch(console.error);
   }, []);
 
   const getItem = (id) => {
-    const product = products.find((item) => item.id === id);
+    const product = products.find((item) => id === id);
     return product;
   };
 
@@ -98,7 +110,6 @@ export function CartProvider(props) {
       setPurchased(cart);
     }
     setCart([]);
-    getProducts();
   };
 
   return (
