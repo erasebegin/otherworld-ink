@@ -24,7 +24,7 @@ export default function PurchaseComplete() {
                        Thank you for your purchase   
                     </p>
                     <p className="text-muted text-center">
-                        🥰
+                        <span role="img" aria-label="love emoji">🥰</span>
                     </p>
                     <p className="text-muted text-center p2">
                         A confirmation email is on it's way.

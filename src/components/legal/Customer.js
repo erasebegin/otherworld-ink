@@ -24,13 +24,13 @@ export default function Customer() {
             <p>For problems regarding the functioning of the website or payment gateway you can contact our technical team by calling us on</p>
             <p>(+44) 7510317754</p>
             <p>or sending an email to</p>
-            <p><a href="mailto:tech-support@otherworldink.com" target="_blank">tech-support@otherworldink.com</a></p>
+            <p><a href="mailto:tech-support@otherworldink.com" target="_blank" rel="noopener noreferrer">tech-support@otherworldink.com</a></p>
 
             <h3>Customer Support</h3>
             <p>For all other enquiries please give us a call on</p>
             <p>(+27) 828561934</p>
             <p>or send an email over to</p>
-            <p><a href="mailto:customer-service@otherworldink.com" target="_blank">customer-service@otherworldink.com</a></p>
+            <p><a href="mailto:customer-service@otherworldink.com" target="_blank" rel="noopener noreferrer">customer-service@otherworldink.com</a></p>
             <br />
             <p>Our key performance target is to reply to 95% of all formal complaints and contacts received by letter within ten working days and email complaints and contacts within five working days.</p>
 

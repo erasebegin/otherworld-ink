@@ -9,30 +9,30 @@ export default function CartButtons({ count, id }) {
             <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0 ">
                 <div className="d-flex justify-content-center">
                     <div>
-                        <span
+                        <button
                             className="btn btn-light mx-1"
                             onClick={() => {
                                 return decrement(id);
                             }}
                         >
                             -
-                        </span>
-                        <span className="btn btn-light mx-1">{count}</span>
-                        <span
+                        </button>
+                        <button className="btn btn-light mx-1">{count}</button>
+                        <button
                             className="btn btn-light mx-1"
                             onClick={() => {
                                 return increment(id);
                             }}
                         >
                             +
-              </span>
+              </button>
                     </div>
                 </div>
             </div>
             <div className="col-10 mx-auto col-lg-2 ">
-                <div className="remove-button" onClick={() => removeItem(id)}>
+                <button className="remove-button" onClick={() => removeItem(id)}>
                     <BsTrashFill />
-                </div>
+                </button>
             </div>
         </>
     )

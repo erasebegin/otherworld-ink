@@ -4,7 +4,7 @@ import Title from "../globals/Title";
 import Img from "gatsby-image";
 
 export default function PortfolioPreview({ data }) {
-  const previewData = data.edges.slice(0, 4);
+  const previewData = data.edges.slice(0, 5);
 
   if (data.edges.length === 0) {
     return <div></div>;

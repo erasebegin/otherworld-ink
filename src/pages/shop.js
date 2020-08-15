@@ -1,10 +1,12 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Background from "../components/globals/Background";
 import Products from "../components/shop/Products";
 
 export default function Shop({ data }) {
+
+  console.log(data)
 
   return (
     <div>
@@ -14,7 +16,7 @@ export default function Shop({ data }) {
           title=" "
           styleClass="secondary-background"
         />
-        <Products />
+        <Products productList={data.products}/>
       </Layout>
     </div>
   );

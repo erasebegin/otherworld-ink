@@ -6,14 +6,14 @@ import { MdShoppingCart } from "react-icons/md";
 import PayPalButton from '../cart/PayPalButton';
 
 export default function Product({ product, history }) {
-    const { inCart, img, title, price, id, caption } = product
+    const { inCart, image, title, price, id, caption } = product.fields
     const { addToCart, clearCart, setPurchaseComplete } = useContext(CartContext)
     return (
 
         <Card className="mx-auto my-3 col-9 col-md-6 col-lg-3">
             <div className="img-container">
                 {/* <Link to="/details" onClick={() => handleDetail(id)}> */}
-                    <img className="card-img-top" src={img} alt={title} />
+                    <img className="card-img-top" src={image.fields.file.url} alt={title} />
                 {/* </Link> */}
                 <button disabled={inCart ? true : false} onClick={() => addToCart(id)}>
                     {inCart ? <Link to="/cart" className="cart-link">in cart</Link> : <MdShoppingCart />}
@@ -61,7 +61,7 @@ const Card = styled.div`
         background: var(--pink);
         color: white;
         border: none;
-        border-radius: 10px 0 0 0;
+        border-radius: 5px 0 0 0;
         font-size: 1.5rem;
 
         &:hover {

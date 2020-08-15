@@ -9,6 +9,7 @@ import EmptyCart from '../components/cart/EmptyCart';
 
 export default function Cart() {
     const { cart } = useContext(CartContext);
+
     if(cart.length>0){
         return(
             <Layout>

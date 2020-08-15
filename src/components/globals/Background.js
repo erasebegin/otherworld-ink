@@ -8,7 +8,7 @@ export default function Background({ img, styleClass, title, children }) {
       <h1 className="title text-white text-uppercase text-center display-4 font-weight-bold">
         {title}
       </h1>
-      <img src={logo} className="main-logo"></img>
+      <img src={logo} className="main-logo" alt="main logo"></img>
       {children}
     </BackgroundImage>
   );

@@ -15,42 +15,45 @@ import para3 from "../images/para3.png";
 import para4 from "../images/para4.png";
 import logo from "../images/otherworld-logo.svg";
 
-const IndexPage = ({ data }) => (
-  <Layout>
-    <SEO title="Home" />
-    <div className="parallax-container">
-      <Parallax speed={-5} centered={true}>
-        <img className="parallax para1" src={para1} />
-      </Parallax>
-      <Parallax speed={-5} centered={true}>
-        <img className="parallax para4" src={para4} />
-      </Parallax>
-      <Parallax speed={-3} centered={true}>
-        <img className="parallax para3" src={para3} />
-      </Parallax>
-      <Parallax speed={-7} centered={true}>
-        <img className="parallax para5" src={logo} />
-      </Parallax>
-      <Parallax speed={3} centered={true}>
-        <img className="parallax para2" src={para2} />
-      </Parallax>     
-    </div>
-    <BlogPreview data={data.blog}/>
-    <PortfolioPreview data={data.portfolio} />
-    <div className="about-btn-container">
-      <Link to="/portfolio">
-        <button className="btn text-uppercase btn-purple">see more</button>
-      </Link>
-    </div>
-    <Info />
-    <div className="about-btn-container">
-      <Link to="/about/">
-        <button className="btn text-uppercase btn-purple">read more</button>
-      </Link>
-    </div>
-    <Contact />
-  </Layout>
-);
+const IndexPage = ({ data }) => {
+  
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <div className="parallax-container">
+        <Parallax speed={-5} centered={true}>
+          <img className="parallax para1" src={para1} alt="part of the parallax graphic"/>
+        </Parallax>
+        <Parallax speed={-5} centered={true}>
+          <img className="parallax para4" src={para4} alt="part of the parallax graphic"/>
+        </Parallax>
+        <Parallax speed={-3} centered={true}>
+          <img className="parallax para3" src={para3} alt="part of the parallax graphic"/>
+        </Parallax>
+        <Parallax speed={-7} centered={true}>
+          <img className="parallax para5" src={logo} alt="part of the parallax graphic"/>
+        </Parallax>
+        <Parallax speed={3} centered={true}>
+          <img className="parallax para2" src={para2} alt="part of the parallax graphic"/>
+        </Parallax>
+      </div>
+      <BlogPreview data={data.blog} />
+      <PortfolioPreview data={data.portfolio} />
+      <div className="about-btn-container">
+        <Link to="/portfolio">
+          <button className="btn text-uppercase btn-purple">see more</button>
+        </Link>
+      </div>
+      <Info />
+      <div className="about-btn-container">
+        <Link to="/about/">
+          <button className="btn text-uppercase btn-purple">read more</button>
+        </Link>
+      </div>
+      <Contact />
+    </Layout>
+  );
+};
 
 export const query = graphql`
   {
@@ -90,6 +93,14 @@ export const query = graphql`
               ...GatsbyContentfulFixed_tracedSVG
             }
           }
+        }
+      }
+    }
+    products: allContentfulProduct(limit: 1000) {
+      edges {
+        node {
+          id
+          title
         }
       }
     }

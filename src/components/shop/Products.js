@@ -5,6 +5,7 @@ import {CartContext} from '../../CartContext';
 
 export default function ProductList() {
     const {products}  = useContext(CartContext)
+    console.log("products:",products)
     return (
         <React.Fragment>
             <div className="py-5 my-5">
