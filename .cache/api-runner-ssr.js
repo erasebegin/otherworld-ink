@@ -1,9 +1,12 @@
 var plugins = [{
+      plugin: require('/home/chris/otherworld-ink/node_modules/gatsby-plugin-mdx/gatsby-ssr'),
+      options: {"plugins":[],"gatsbyRemarkPlugins":[{"resolve":"gatsby-remark-images-contentful","options":{"maxWidth":590,"linkImagesToOriginal":false,"withWebp":true,"loading":"lazy"}}]},
+    },{
       plugin: require('/home/chris/otherworld-ink/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
       plugin: require('/home/chris/otherworld-ink/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/otherworld-logo.svg"},
+      options: {"plugins":[],"name":"Otherworld Ink","short_name":"otherworld","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/otherworld-logo.svg"},
     },{
       plugin: require('/home/chris/otherworld-ink/gatsby-ssr'),
       options: {"plugins":[]},

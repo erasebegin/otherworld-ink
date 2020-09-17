@@ -47,10 +47,10 @@ export default function CartTotals({ history }) {
                             <span className="text-title"> total :</span>{" "}
                             <strong>$ {totals[2]} </strong>
                         </h5>
-                        <PayPalButton totalAmount={totals[2]}
+                        {/* <PayPalButton totalAmount={totals[2]}
                             clearCart={clearCart}
                             history={history}
-                            />
+                            /> */}
                     </div>
                 </div>
             </div>

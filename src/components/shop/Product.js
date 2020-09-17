@@ -22,13 +22,13 @@ export default function Product({ product, history }) {
             <h4 className="text-center my-2">{title}</h4>
             <p className="caption">{caption}</p>
             <p className="price">${price}</p>
-            <PayPalButton
+            {/* <PayPalButton
                 totalAmount={price}
                 clearCart={clearCart}
                 purchaseComplete={()=>setPurchaseComplete(true)}
                 addToCart={() => addToCart(id)}
                 history={history}
-            />
+            /> */}
         </Card>
 
     )

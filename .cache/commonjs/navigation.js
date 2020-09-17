@@ -230,7 +230,7 @@ class RouteAnnouncer extends _react.default.Component {
   }
 
   render() {
-    return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, _routeAnnouncerProps.RouteAnnouncerProps, {
+    return _react.default.createElement("div", (0, _extends2.default)({}, _routeAnnouncerProps.RouteAnnouncerProps, {
       ref: this.announcementRef
     }));
   }
@@ -264,7 +264,7 @@ class RouteUpdates extends _react.default.Component {
   }
 
   render() {
-    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, this.props.children, /*#__PURE__*/_react.default.createElement(RouteAnnouncer, {
+    return _react.default.createElement(_react.default.Fragment, null, this.props.children, _react.default.createElement(RouteAnnouncer, {
       location: location
     }));
   }
