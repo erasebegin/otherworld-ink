@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "../globals/Title";
+import styled from "styled-components";
 
 export default function Contact() {
   return (
@@ -42,15 +43,24 @@ export default function Contact() {
               ></textarea>
             </div>
             {/* submit */}
-            <button
+            <Button
               type="submit"
               className="btn btn-purple btn-block text-capitalize my-5"
             >
               Submit
-            </button>
+            </Button>
           </form>
         </div>
       </div>
     </section>
   );
 }
+
+const Button = styled.button`
+  max-width: 80%;
+  margin: auto;
+
+  @media(min-width: 700px){
+    max-width: 50%;
+  }
+`

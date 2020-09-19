@@ -1,22 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Background from "../components/globals/Background";
-import Products from "../components/shop/Products";
+import ProductList from "../components/shop/ProductList";
 
 export default function Shop({ data }) {
+  const [isMobile, setIsMobile] = useState(true);
 
-  console.log(data)
+  useEffect(() => {
+    window.innerWidth <= 800 ? setIsMobile(true) : setIsMobile(false);
+  });
+
+  if (typeof window === "undefined") {
+    global.window = {};
+  }
+
+  window.onresize = function() {
+    window.innerWidth <= 800 ? setIsMobile(true) : setIsMobile(false);
+  };
+
+  const images = data.headerImage.edges[0].node;
+
+  const largeImage = images.shop.fluid;
+  const smallImage = images.shopSmall ? images.shopSmall.fluid : null;
 
   return (
     <div>
       <Layout>
         <Background
-          img={data.img.childImageSharp.fluid}
+          img={isMobile && smallImage ? smallImage : largeImage}
           title=" "
           styleClass="secondary-background"
         />
-        <Products productList={data.products}/>
+        <ProductList items={data.products.edges} isMobile={isMobile} />
       </Layout>
     </div>
   );
@@ -24,10 +40,37 @@ export default function Shop({ data }) {
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "techno-hunter.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
+    headerImage: allContentfulHeaderImages(sort: { fields: createdAt }) {
+      edges {
+        node {
+          shop {
+            fluid(cropFocus: CENTER, resizingBehavior: FILL) {
+              ...GatsbyContentfulFluid
+            }
+          }
+          shopSmall {
+            fluid(cropFocus: CENTER, resizingBehavior: FILL) {
+              ...GatsbyContentfulFluid
+            }
+          }
+        }
+      }
+    }
+    products: allContentfulProduct {
+      edges {
+        node {
+          id
+          description {
+            description
+          }
+          price
+          slug
+          title
+          image {
+            fluid(resizingBehavior: CROP, cropFocus: CENTER) {
+              ...GatsbyContentfulFluid
+            }
+          }
         }
       }
     }

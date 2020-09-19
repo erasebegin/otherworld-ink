@@ -54,5 +54,11 @@ module.exports = {
         icon: `src/images/otherworld-logo.svg`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-plugin-snipcartv3",
+      options: {
+        apiKey: process.env.SNIPCART_API_KEY,
+      },
+    },
   ],
 };

@@ -62,9 +62,6 @@ export default function Footer() {
 }
 
 const FooterStyled = styled.footer`
-  position: relative;
-  left: 0;
-  bottom: 0;
   width: 100%;
   color: var(--purple3);
   background: linear-gradient(59deg, #27496f, #351f53, #4600a1);

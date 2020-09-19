@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 import { storeProducts } from "./data";
-import { client } from "./contentful";
+// import { client } from "./contentful";
 
 export const CartContext = createContext();
 
@@ -33,18 +33,17 @@ export function CartProvider(props) {
     items.forEach((item) => {
       newArr.push(item.fields);
     });
-    console.log(newArr)
     setProducts(newArr)
   };
 
-  useEffect(() => {
-    client
-      .getEntries({ content_type: "product" })
-      .then((response) => {
-        createProductsArray(response.items);
-      })
-      .catch(console.error);
-  }, []);
+  // useEffect(() => {
+  //   client
+  //     .getEntries({ content_type: "product" })
+  //     .then((response) => {
+  //       createProductsArray(response.items);
+  //     })
+  //     .catch(console.error);
+  // }, []);
 
   const getItem = (id) => {
     const product = products.find((item) => id === id);

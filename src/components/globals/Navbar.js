@@ -31,6 +31,11 @@ export default function Navbar() {
       id: 5,
       path: "/about",
       text: "about"
+    },
+    {
+      id: 6,
+      path: "/contact",
+      text: "contact"
     }
   ]);
 

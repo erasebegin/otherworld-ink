@@ -9,12 +9,14 @@ import "./layout.css";
 import "./bootstrap.min.css";
 
 const Layout = ({ children }) => (
-  <Container>
-    <Navbar />
-    {children}
-    <div className="push"></div>
+  <>
+    <Container>
+      <Navbar />
+      {children}
+      <div className="push"></div>
+    </Container>
     <Footer />
-  </Container>
+  </>
 );
 
 Layout.propTypes = {
@@ -24,6 +26,5 @@ Layout.propTypes = {
 export default Layout;
 
 const Container = styled.div`
-  /* min-height: 100vh;
-  background: white; */
-`
+  min-height:  calc(100vh - 168.8px);
+`;

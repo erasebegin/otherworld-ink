@@ -6771,6 +6771,11 @@ gatsby-plugin-snipcart@^1.1.2:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-snipcart/-/gatsby-plugin-snipcart-1.1.2.tgz#ac2e672ae4fec200ecfce81f267e6e95040131a5"
   integrity sha512-p3qpYVbedxqxWUJ42qhZKF9dbmGwi0mHvUZZ53/FcNoFrp3AeWFah86+YWkgPuERlliQBRUuZoW1gNV13ONnlA==
 
+gatsby-plugin-snipcartv3@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-snipcartv3/-/gatsby-plugin-snipcartv3-2.3.2.tgz#7afa699ab620a3871b5063225841cf48e084cf9b"
+  integrity sha512-FzGBgCOHs0Um1sfZhOhMVerRXZ1I5I4kHjtHeYcqB5FuJTYB9r6aBJOD99yhgyikOWQ/i3a0BLzj5rhZVWCvcg==
+
 gatsby-plugin-typescript@^2.4.20:
   version "2.4.20"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.4.20.tgz#460c819b9a1d3da3d0626ca2dc9f131ad9859e6c"
@@ -13231,6 +13236,11 @@ snapdragon@^0.8.1:
     source-map "^0.5.6"
     source-map-resolve "^0.5.0"
     use "^3.1.0"
+
+snipcart@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/snipcart/-/snipcart-0.0.1.tgz#01e14b6ef3c0450fe6a94393e2555842ae871a1d"
+  integrity sha1-AeFLbvPARQ/mqUOT4lVYQq6HGh0=
 
 socket.io-adapter@~1.1.0:
   version "1.1.2"
