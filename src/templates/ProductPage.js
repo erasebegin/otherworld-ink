@@ -75,7 +75,7 @@ export const pageQuery = graphql`
               width: 200
               resizingBehavior: FILL
             ) {
-              ...GatsbyContentfulFixed_tracedSVG
+              ...GatsbyContentfulFixed
             }
           }
         }

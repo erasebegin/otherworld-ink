@@ -19,7 +19,7 @@ export default function AddToCartButton({
         data-item-price={price}
         data-item-url={`/${slug}`}
         data-item-description={description}
-        data-item-image={image ? image.fixed.src : null}
+        data-item-image={image ? image.fluid.src : null}
         data-item-name={title}
       >
         ADD TO CART <FaCartPlus />
@@ -43,12 +43,11 @@ export default function AddToCartButton({
 }
 
 const Button = styled.button`
-  padding: 0 0.4em;
+  padding: 0 .5em .2em .5em;
   transition: 200ms ease-in-out;
   background: var(--pink);
   color: white;
   border: none;
-  border-radius: 5px 0 0 0;
   font-size: 1.5rem;
 
   &:hover {

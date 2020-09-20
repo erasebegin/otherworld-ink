@@ -48,7 +48,7 @@ export const query = graphql`
     img: file(relativePath: { eq: "tao-gas-master.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -62,7 +62,7 @@ export const query = graphql`
           }
           image {
             fixed(height: 220, width: 345) {
-              ...GatsbyContentfulFixed_tracedSVG
+              ...GatsbyContentfulFixed
             }
           }
           slug

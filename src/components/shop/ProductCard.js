@@ -5,37 +5,27 @@ import styled from "styled-components";
 import CartButton from "../cart/AddToCartButton";
 
 export default function productCard({ data }) {
-  const {
-    id,
-    title,
-    description,
-    price,
-    image,
-    slug,
-  } = data.node;
+  const { id, title, description, price, image, slug } = data.node;
 
   return (
     <Card className="column">
-      <div className="card card-equal-height">
-        <div className="card-image">
-          <figure className="image">
-            <Link to={`/shop/${slug}`}>
-              <Img
-                fluid={image.fluid}
-                className="product-image"
-                alt="a random image"
-              />
-            </Link>
-          </figure>
+      <div className="card">
+        <div>
+          <Link to={`/shop/${slug}`}>
+            <Img
+              fluid={image.fluid}
+              className="product-image"
+              alt="a random image"
+            />
+          </Link>
         </div>
         <div className="card-content">
           <div className="title-container">
             <Link to={`/${slug}`}>
-              <p className="card-title">{title.toLowerCase()}</p>
+              <p className="card-title">{title}</p>
             </Link>
           </div>
           <div className="content">
-            {/* <p>{description.internal.content}</p> */}
           </div>
         </div>
         <div className="footer">
@@ -43,7 +33,6 @@ export default function productCard({ data }) {
           <CartButton
             id={id}
             title={title}
-            // description={description.internal.content}
             image={image}
             slug={slug}
             price={price}
@@ -62,6 +51,7 @@ const Card = styled.div`
     flex-direction: column;
     height: 100%;
     margin-bottom: 2em;
+    background: rgb(35, 35, 35) !important;
   }
 
   .footer {
@@ -71,34 +61,37 @@ const Card = styled.div`
     margin-top: auto;
     width: 100%;
     padding: 1em 2em;
-    border-top: 2px solid #f1de9e;
+    border-top: 2px solid var(--purple1);
+    background: rgb(40, 40, 40);
 
     p {
       width: 100%;
-      font-family: "Playfair Display", serif;
       font-weight: 400;
       font-size: 1.3rem;
+      color: #8d8d8d;
     }
   }
 
   .title-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 1em;
-    margin-bottom: 1em;
-    margin-top: -8%;
+    margin: 1em 0;
     .card-title {
-      font-family: "Playfair Display", serif;
       font-size: 1.6rem;
-      color: #6e6546;
+      color: var(--purple3);
+      &:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--purple1) !important;
+      }
     }
   }
 
   .product-image {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
-    max-width: 96.5%;
+    max-width: 92%;
     height: 300px;
     margin: 0 auto;
     margin-top: -3.5%;

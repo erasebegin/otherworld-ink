@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
+import Img from "gatsby-image";
+import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
+import { MDXProvider } from "@mdx-js/react";
+import styled from "styled-components";
 
 import Layout from "../components/layout";
 import Background from "../components/globals/Background";
-import Info from "../components/home/Info";
+import Title from "../components/globals/Title";
 import SEO from "../components/seo";
 
 const AboutPage = ({ data }) => {
-  
+  const { title, body, image } = data.aboutInfo.edges[0].node;
+
   const [isMobile, setIsMobile] = useState(true);
 
   useEffect(() => {
@@ -31,20 +36,50 @@ const AboutPage = ({ data }) => {
     <Layout>
       <SEO title="About" />
       <Background
-        img={isMobile && smallImage ? smallImage : largeImage}
-        title=" "
-        styleClass="secondary-background"
-      />
-      <Info />
-      <div className="about-btn-container">
-        <a href="mailto:leon@otherworldink.com">
-          <button className="btn text-uppercase btn-purple">contact me</button>
-          {/* TODO: set to new contact page */}
-        </a>
-      </div>
+          img={isMobile && smallImage ? smallImage : largeImage}
+          title=" "
+          styleClass="secondary-background"
+        />
+      <Container>
+        {title ? <Title title={title} /> : <></>}
+  
+        <Img fluid={image.fluid} className="main-image"/>
+  
+        {body ? (
+          <MDXProvider>
+            <article className="text-muted text-left">
+              <MDXRenderer>{body.childMdx.body}</MDXRenderer>
+            </article>
+          </MDXProvider>
+        ) : (
+          <article>&nbsp;</article>
+        )}
+        <div className="about-btn-container">
+          <Link to="/contact">
+            <button className="btn text-uppercase btn-purple">contact me</button>
+          </Link>
+        </div>
+      </Container>
     </Layout>
   );
 };
+
+const Container = styled.div`
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  .main-image {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  article {
+    margin: 2em 0;
+  }
+`
 
 export const query = graphql`
   {
@@ -56,11 +91,28 @@ export const query = graphql`
               ...GatsbyContentfulFluid
             }
           }
-           aboutSmall {
-             fluid(cropFocus: CENTER, resizingBehavior: FILL) {
-               ...GatsbyContentfulFluid
-             }
-           }
+          aboutSmall {
+            fluid(cropFocus: CENTER, resizingBehavior: FILL) {
+              ...GatsbyContentfulFluid
+            }
+          }
+        }
+      }
+    }
+    aboutInfo: allContentfulAboutPage(sort: { fields: updatedAt }) {
+      edges {
+        node {
+          body {
+            childMdx {
+              body
+            }
+          }
+          image {
+            fluid(cropFocus: CENTER, resizingBehavior: FILL, maxWidth: 500) {
+              ...GatsbyContentfulFluid
+            }
+          }
+          title
         }
       }
     }

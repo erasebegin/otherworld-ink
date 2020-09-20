@@ -60,7 +60,7 @@ export const query = graphql`
     img: file(relativePath: { eq: "crow-lord.jpeg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -72,7 +72,7 @@ export const query = graphql`
           title
           image {
             fixed(height: 200, width: 200) {
-              ...GatsbyContentfulFixed_tracedSVG
+              ...GatsbyContentfulFixed
             }
           }
         }
@@ -90,7 +90,7 @@ export const query = graphql`
           }
           image {
             fixed(height: 200, width: 200) {
-              ...GatsbyContentfulFixed_tracedSVG
+              ...GatsbyContentfulFixed
             }
           }
         }

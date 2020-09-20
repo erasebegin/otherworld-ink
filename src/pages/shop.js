@@ -32,7 +32,7 @@ export default function Shop({ data }) {
           title=" "
           styleClass="secondary-background"
         />
-        <ProductList items={data.products.edges} isMobile={isMobile} />
+        <ProductList items={data.products.edges} isMobile={isMobile} limit={20}/>
       </Layout>
     </div>
   );
@@ -66,6 +66,7 @@ export const query = graphql`
           price
           slug
           title
+          caption
           image {
             fluid(resizingBehavior: CROP, cropFocus: CENTER) {
               ...GatsbyContentfulFluid
