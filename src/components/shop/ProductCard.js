@@ -5,7 +5,7 @@ import styled from "styled-components";
 import CartButton from "../cart/AddToCartButton";
 
 export default function productCard({ data }) {
-  const { id, title, description, price, image, slug } = data.node;
+  const { id, title, price, images, slug } = data.node;
 
   return (
     <Card className="column">
@@ -13,7 +13,7 @@ export default function productCard({ data }) {
         <div>
           <Link to={`/shop/${slug}`}>
             <Img
-              fluid={image.fluid}
+              fluid={images[0].fluid}
               className="product-image"
               alt="a random image"
             />
@@ -33,7 +33,7 @@ export default function productCard({ data }) {
           <CartButton
             id={id}
             title={title}
-            image={image}
+            // image={images[0].fluid}
             slug={slug}
             price={price}
           />

@@ -108,21 +108,6 @@ h6 {
   transition: 200ms;
 }
 
-/* SHOP PAGE ONLY */
-
-.transaction-logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.transaction-logo-container img {
-  max-height: 50px;
-  border-radius: 5px;
-  margin: 20px 0 20px 10px;
-}
-
 /* PARALLAX IMAGE STYLES */
 
 .parallax-container {
@@ -317,54 +302,6 @@ h6 {
   overflow: hidden;
 }
 
-/* .footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: var(--purple3);
-  background: linear-gradient(59deg, #27496f, #351f53, #d3b2ff);
-  background-size: 400% 400%;
-
-  -webkit-animation: nav-gradient 6s ease infinite;
-  -moz-animation: nav-gradient 6s ease infinite;
-  animation: nav-gradient 6s ease infinite;
-
-  @-webkit-keyframes nav-gradient {
-    0% {
-      background-position: 0% 52%;
-    }
-    50% {
-      background-position: 100% 49%;
-    }
-    100% {
-      background-position: 0% 52%;
-    }
-  }
-  @-moz-keyframes nav-gradient {
-    0% {
-      background-position: 0% 52%;
-    }
-    50% {
-      background-position: 100% 49%;
-    }
-    100% {
-      background-position: 0% 52%;
-    }
-  }
-  @keyframes nav-gradient {
-    0% {
-      background-position: 0% 52%;
-    }
-    50% {
-      background-position: 100% 49%;
-    }
-    100% {
-      background-position: 0% 52%;
-    }
-  }
-} */
-
 .contact-list {
   margin: auto;
   display: flex;
@@ -390,9 +327,8 @@ iframe {
   max-width: 90%;
 }
 
-/* @media (max-width: 700px) {
-  iframe {
-    max-width: 200px;
-    max-height: 800px;
-  }
-} */
+/* SNIPCART */
+
+.snipcart-layout .snipcart-modal {
+  z-index: 1000 !important;
+}

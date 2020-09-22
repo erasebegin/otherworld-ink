@@ -5,16 +5,15 @@ import styled from "styled-components";
 import CartButton from "../cart/AddToCartButton";
 
 export default function productCardLarge({ data }) {
-  const { title, price, image, slug, id, caption } = data.node;
-
-  console.log({ image });
+  console.log("card data: ", data);
+  const { title, price, images, slug, id, caption } = data.node;
 
   return (
     <Card>
       <div className="product-image-container">
-        <p className="image-caption">{caption}</p>
+        {caption ? <p className="image-caption">{caption}</p> : ""}
         <Link to={`/shop/${slug}`}>
-          <Img fluid={image.fluid} className="product-image" />
+          <Img fluid={images[0].fluid} className="product-image" />
         </Link>
       </div>
       <div className="product-info">
@@ -29,7 +28,7 @@ export default function productCardLarge({ data }) {
           <CartButton
             id={id}
             title={title}
-            image={image}
+            // image={images[0].fluid}
             slug={slug}
             price={price}
           />
@@ -63,7 +62,7 @@ const Card = styled.div`
     max-width: 50%;
     button {
       position: absolute;
-      z-index: 100;
+      z-index: 1;
     }
     .product-image {
       width: 250px;

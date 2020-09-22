@@ -6776,6 +6776,13 @@ gatsby-plugin-snipcartv3@^2.3.2:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-snipcartv3/-/gatsby-plugin-snipcartv3-2.3.2.tgz#7afa699ab620a3871b5063225841cf48e084cf9b"
   integrity sha512-FzGBgCOHs0Um1sfZhOhMVerRXZ1I5I4kHjtHeYcqB5FuJTYB9r6aBJOD99yhgyikOWQ/i3a0BLzj5rhZVWCvcg==
 
+gatsby-plugin-styled-components@^3.3.11:
+  version "3.3.11"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.3.11.tgz#fc9af659edcd623fd3bebeb826979ee773b86ec0"
+  integrity sha512-pO7WIXG8TbjkYybVG47WtRXulqvX8nYOeDQD/dD0cRxoyFVyFNoWC5Audyg5IuJWCXPgAG/CmEXM/b+2JQEveQ==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+
 gatsby-plugin-typescript@^2.4.20:
   version "2.4.20"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.4.20.tgz#460c819b9a1d3da3d0626ca2dc9f131ad9859e6c"

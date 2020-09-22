@@ -60,5 +60,6 @@ module.exports = {
         apiKey: process.env.SNIPCART_API_KEY,
       },
     },
+    `gatsby-plugin-styled-components`
   ],
 };

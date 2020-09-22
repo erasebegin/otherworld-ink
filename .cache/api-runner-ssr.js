@@ -11,6 +11,9 @@ var plugins = [{
       plugin: require('/home/chris/otherworld-ink/node_modules/gatsby-plugin-snipcartv3/gatsby-ssr'),
       options: {"plugins":[],"apiKey":"MzBmN2Y2NzktOWJjNS00MmRkLThlNjItODk5ZjY1NTM5ODk3NjM3MTY5NTQ2NDc2ODAxNTk3"},
     },{
+      plugin: require('/home/chris/otherworld-ink/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('/home/chris/otherworld-ink/gatsby-ssr'),
       options: {"plugins":[]},
     }]
