@@ -12,8 +12,6 @@ export default function ProductPageHeader({ data, isMobile }) {
     setCurrDispImg(images[index].fluid);
   };
 
-  console.log({ currDispImg });
-
   return (
     <Container>
       <div className="image-container">

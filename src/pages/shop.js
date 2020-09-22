@@ -7,8 +7,6 @@ import ProductList from "../components/shop/ProductList";
 export default function Shop({ data }) {
   const [isMobile, setIsMobile] = useState(true);
 
-  console.log({data})
-
   useEffect(() => {
     window.innerWidth <= 800 ? setIsMobile(true) : setIsMobile(false);
   });
