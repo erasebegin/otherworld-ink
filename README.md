@@ -10,3 +10,5 @@
 - Content is managed through contentful
 
 - Project created and maintained by Chris Haupt for the display and retail of the work of Leon "Otherworld" de Bruyn
+
+*NOTE: alterations need to be made to /src/components/Background.js before `gatsby develop` will work, these changes need to be reverted when building site. See afforementioned component for more information*

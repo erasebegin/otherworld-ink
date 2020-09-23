@@ -21,6 +21,7 @@ export default function AddToCartButton({
         data-item-description={description}
         // data-item-image={image ? image.fluid.src : null}
         data-item-name={title}
+        alt={true}
       >
         ADD TO CART <FaCartPlus />
       </Button>
@@ -35,6 +36,7 @@ export default function AddToCartButton({
         data-item-description={description}
         // data-item-image={image ? image.fluid.src : null}
         data-item-name={title}
+        alt={false}
       >
         <FaCartPlus size=".75em" />
       </Button>
@@ -43,15 +45,15 @@ export default function AddToCartButton({
 }
 
 const Button = styled.button`
-  padding: 0 .5em .2em .5em;
+  padding: ${(props) => (props.alt ? "0 .5em" : "0 0.5em 0.2em 0.5em")};
   transition: 200ms ease-in-out;
-  background: var(--pink);
-  color: white;
+  background: ${(props) => (props.alt ? "var(--purple1)" : "var(--pink)")};
+  color: ${(props) => (props.alt ? "var(--purple3)" : "var(--purple3)")};
   border: none;
   font-size: 1.5rem;
 
   &:hover {
-    background: var(--purple1);
-    color: var(--pink);
+    background: ${(props) => (props.alt ? "var(--pink)" : "var(--pink)")};
+    color: ${(props) => (props.alt ? "var(--purple3)" : "var(--purple4)")};
   }
 `;

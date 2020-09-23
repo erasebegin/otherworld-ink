@@ -39,10 +39,13 @@ const GalleryContainer = styled.div`
     max-width: 100%;
   }
   .gallery-image {
-    max-width: 100px;
+    max-width: 50px;
     object-fit: cover;
     transition: 200ms;
     margin: 0 0.5em;
+    @media (min-width: 780px) {
+    max-width: 100px;
+  }
 
     &:hover {
       transform: translate(-2px, -1px);

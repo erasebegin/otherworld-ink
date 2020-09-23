@@ -51,7 +51,7 @@ export default ProductPage;
 const Container = styled.div`
   article {
     p {
-      margin: 2em 0;
+      margin: 2em 1em;
       font-size: 1.2rem;
     }
   }

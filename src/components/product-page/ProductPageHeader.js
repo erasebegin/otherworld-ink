@@ -87,6 +87,7 @@ const Container = styled.div`
       -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
       box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
       z-index: 81;
+      height: 300px;
 
       @media (min-width: 600px) {
         min-width: 200px;
@@ -98,11 +99,11 @@ const Container = styled.div`
   .product-header-info {
     display: flex;
     flex-direction: column;
-    padding-left: 2em;
     margin: auto;
     .product-header-title {
       font-size: 1.4rem;
       font-weight: 600;
+      text-align: center;
       order: 2;
     }
     .product-header-description {
@@ -129,6 +130,9 @@ const Container = styled.div`
     }
 
     @media (min-width: 780px) {
+      .product-header-info {
+        padding-left: 2em;
+      }
       .product-header-title {
         order: 1;
       }
