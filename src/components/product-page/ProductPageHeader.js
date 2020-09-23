@@ -60,18 +60,17 @@ export default function ProductPageHeader({ data, isMobile }) {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 2em;
   margin: auto;
   padding: 2em;
   background: var(--purple1);
   color: var(--purple3);
   margin-top: 2em;
-  /* VIA CSS MATIC https://goo.gl/cIbnS */
-  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  min-width: 80vw;
 
-  @media (min-width: 700px) {
-    max-width: 80vw;
+  @media (min-width: 800px) {
+    max-width: 75vw;
+    min-width: 70vw;
     flex-direction: row;
   }
 
@@ -79,6 +78,13 @@ const Container = styled.div`
     padding: 1em;
     background: var(--purple2);
     z-index: 1;
+    height: 400px;
+    width: 300px;
+    margin: auto;
+    /* VIA CSS MATIC https://goo.gl/cIbnS */
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
 
     .product-image-main {
       margin: auto;
@@ -87,7 +93,7 @@ const Container = styled.div`
       -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
       box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
       z-index: 81;
-      height: 300px;
+      height: 100%;
 
       @media (min-width: 600px) {
         min-width: 200px;
@@ -100,14 +106,21 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     margin: auto;
+    width: 100%;
+    @media (min-width: 780px) {
+      margin: 0;
+    }
     .product-header-title {
-      font-size: 1.4rem;
+      font-size: 1.9rem;
       font-weight: 600;
       text-align: center;
       order: 2;
     }
     .product-header-description {
       order: 3;
+    }
+    .carousel-container {
+      order: 1;
     }
     .padding {
       order: 1;
@@ -118,21 +131,17 @@ const Container = styled.div`
       align-items: flex-end;
       justify-content: space-between;
       order: 4;
+      margin: auto;
+      width: 100%;
       /* border-top: 1px solid var(--purple3); */
       p {
         font-size: 1.8rem;
         font-weight: 100;
         margin: 0;
       }
-      .carousel-container {
-        order: 1;
-      }
     }
 
     @media (min-width: 780px) {
-      .product-header-info {
-        padding-left: 2em;
-      }
       .product-header-title {
         order: 1;
       }
@@ -148,8 +157,9 @@ const Container = styled.div`
         order: 3;
         padding: 1em;
       }
-      .buttons {
+      .price-button-container {
         order: 4;
+        /* border: 1px solid red; */
       }
     }
   }

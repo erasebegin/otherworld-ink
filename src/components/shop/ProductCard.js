@@ -21,7 +21,7 @@ export default function productCard({ data }) {
         </div>
         <div className="card-content">
           <div className="title-container">
-            <Link to={`/${slug}`}>
+            <Link to={`/shop/${slug}`}>
               <p className="card-title">{title}</p>
             </Link>
           </div>
@@ -33,7 +33,7 @@ export default function productCard({ data }) {
           <CartButton
             id={id}
             title={title}
-            // image={images[0].fluid}
+            image={images[0].fluid}
             slug={slug}
             price={price}
           />
@@ -50,7 +50,7 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
     background: rgb(35, 35, 35) !important;
   }
 

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import { MDXProvider } from "@mdx-js/react";
 import styled from "styled-components";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 import ProductPageHeader from "../components/product-page/ProductPageHeader";
 import Layout from "../components/layout";
@@ -29,19 +30,26 @@ const ProductPage = ({ data }) => {
     <Layout>
       <SEO title={title} />
       <Container className="container">
-            <ProductPageHeader
-              data={data.contentfulProduct}
-              isMobile={isMobile}
-            />
-            {description ? (
-              <MDXProvider>
-                <article className="text-muted text-left">
-                  <MDXRenderer>{description.childMdx.body}</MDXRenderer>
-                </article>
-              </MDXProvider>
-            ) : (
-              <article>&nbsp;</article>
-            )}
+        {isMobile ? (
+          <Link to="/shop" className="btn-back">
+            <button className="btn btn-purple">
+              <IoMdArrowRoundBack />
+              BACK TO SHOP
+            </button>
+          </Link>
+        ) : (
+          ""
+        )}
+        <ProductPageHeader data={data.contentfulProduct} isMobile={isMobile} />
+        {description ? (
+          <MDXProvider>
+            <article className="text-muted text-left">
+              <MDXRenderer>{description.childMdx.body}</MDXRenderer>
+            </article>
+          </MDXProvider>
+        ) : (
+          <article>&nbsp;</article>
+        )}
       </Container>
     </Layout>
   );
@@ -49,6 +57,12 @@ const ProductPage = ({ data }) => {
 export default ProductPage;
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  .btn-back {
+    margin: auto;
+    margin-top: 2em;
+  }
   article {
     p {
       margin: 2em 1em;
@@ -63,10 +77,7 @@ export const pageQuery = graphql`
       slug
       id
       images {
-        fluid(
-          cropFocus: CENTER
-          resizingBehavior: FILL
-        ) {
+        fluid(cropFocus: CENTER, resizingBehavior: FILL) {
           ...GatsbyContentfulFluid
         }
       }

@@ -28,7 +28,7 @@ export default function productCardLarge({ data }) {
           <CartButton
             id={id}
             title={title}
-            // image={images[0].fluid}
+            image={images[0].fluid}
             slug={slug}
             price={price}
           />
@@ -73,7 +73,7 @@ const Card = styled.div`
       position: absolute;
       background: var(--purple1);
       width: auto;
-      z-index: 100;
+      z-index: 2;
       padding: 0.5em;
       color: var(--purple3);
       text-transform: uppercase;

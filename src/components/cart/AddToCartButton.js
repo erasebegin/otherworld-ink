@@ -19,7 +19,7 @@ export default function AddToCartButton({
         data-item-price={price}
         data-item-url={`/${slug}`}
         data-item-description={description}
-        // data-item-image={image ? image.fluid.src : null}
+        data-item-image={image ? image.src : null}
         data-item-name={title}
         alt={true}
       >
@@ -34,7 +34,7 @@ export default function AddToCartButton({
         data-item-price={price}
         data-item-url={`/${slug}`}
         data-item-description={description}
-        // data-item-image={image ? image.fluid.src : null}
+        data-item-image={image ? image.src : null}
         data-item-name={title}
         alt={false}
       >
