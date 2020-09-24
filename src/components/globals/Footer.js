@@ -105,6 +105,12 @@ const FooterStyled = styled.footer`
     }
   }
 
+  .nav-link {
+    font-size: 1.7rem;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
   .terms-link {
     text-decoration: none;
     color: var(--purple3);

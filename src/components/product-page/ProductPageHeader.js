@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Img from "gatsby-image";
+import ModalImage from "react-modal-image";
 import styled from "styled-components";
+
 import ImageCarousel from "./ImageCarousel";
 import AddToCartButton from "../cart/AddToCartButton";
 
@@ -15,7 +17,7 @@ export default function ProductPageHeader({ data, isMobile }) {
   return (
     <Container>
       <div className="image-container">
-        <Img fluid={currDispImg} className="product-image-main" />
+        <ModalImage small={currDispImg.src} large={currDispImg.src} className="product-image-main" />
       </div>
       <div className="product-header-info">
         <p className="product-header-title">{title}</p>
@@ -68,7 +70,7 @@ const Container = styled.div`
   margin-top: 2em;
   min-width: 80vw;
 
-  @media (min-width: 800px) {
+  @media (min-width: 900px) {
     max-width: 75vw;
     min-width: 70vw;
     flex-direction: row;
@@ -87,17 +89,12 @@ const Container = styled.div`
     box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
 
     .product-image-main {
-      margin: auto;
-      width: 90%;
-      -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-      -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-      box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-      z-index: 81;
-      height: 100%;
-
+      width: 270px;
+      height: 370px;
+      object-fit: cover;
+      
       @media (min-width: 600px) {
         min-width: 200px;
-        width: 50%;
       }
     }
   }
@@ -118,6 +115,7 @@ const Container = styled.div`
     }
     .product-header-description {
       order: 3;
+      font-size: 1.2rem;
     }
     .carousel-container {
       order: 1;

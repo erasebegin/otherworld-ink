@@ -5,7 +5,6 @@ const preferDefault = m => (m && m.default) || m
 
 
 exports.components = {
-  "component---cache-dev-404-page-js": hot(preferDefault(require("/home/chris/otherworld-ink/.cache/dev-404-page.js"))),
   "component---src-pages-404-js": hot(preferDefault(require("/home/chris/otherworld-ink/src/pages/404.js"))),
   "component---src-pages-about-js": hot(preferDefault(require("/home/chris/otherworld-ink/src/pages/about.js"))),
   "component---src-pages-blog-js": hot(preferDefault(require("/home/chris/otherworld-ink/src/pages/blog.js"))),

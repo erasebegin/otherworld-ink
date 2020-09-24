@@ -9,6 +9,7 @@ export default function AddToCartButton({
   price,
   description,
   slug,
+  guid,
   alt,
 }) {
   if (alt) {
@@ -21,6 +22,7 @@ export default function AddToCartButton({
         data-item-description={description}
         data-item-image={image ? image.src : null}
         data-item-name={title}
+        data-item-file-guid={guid}
         alt={true}
       >
         ADD TO CART <FaCartPlus />
@@ -36,6 +38,7 @@ export default function AddToCartButton({
         data-item-description={description}
         data-item-image={image ? image.src : null}
         data-item-name={title}
+        data-item-file-guid={guid}
         alt={false}
       >
         <FaCartPlus size=".75em" />
