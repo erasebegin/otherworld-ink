@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Img from "gatsby-image";
 import ModalImage from "react-modal-image";
 import styled from "styled-components";
 

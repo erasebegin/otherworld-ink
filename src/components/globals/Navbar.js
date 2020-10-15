@@ -78,7 +78,7 @@ export default function Navbar() {
           })}
           <li>
             <button className="snipcart-checkout cart-icon">
-              <MdShoppingCart />
+              <MdShoppingCart size={25}/>
             </button>
           </li>
         </ul>
@@ -150,7 +150,7 @@ const Nav = styled.nav`
     cursor: pointer;
     color: var(--pink);
     font-size: 2rem;
-    margin: 0.5rem 1rem;
+    margin-top: -.1em;
     transition: 200ms;
     background: none;
     border: none;
